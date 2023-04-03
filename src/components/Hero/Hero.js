@@ -1,6 +1,6 @@
 import React from 'react'
 import './hero.css'
-import SpellSworn from '../../../static/SpellSworn.jpeg'
+import SpellSworn from '../../../static/SpellSworn.png'
 import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
 import Button from '../Button/Button'
