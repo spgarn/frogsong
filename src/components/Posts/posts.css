@@ -1,0 +1,16 @@
+.post-list{
+    display: grid;
+    grid-auto-columns: 1fr;
+    row-gap: 12px;
+    padding: 12px 0;
+}
+
+.post-card{
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    height: 120px;
+    padding:12px 24px
+}
+

@@ -1,0 +1,10 @@
+.content-grid{
+    display: grid;
+    grid-template-areas: 
+    "hero hero"
+    "games posts"
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80vh 1fr;
+    min-height: 100vh;
+}
