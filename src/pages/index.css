@@ -8,3 +8,16 @@
     grid-template-rows: 80vh 1fr;
     min-height: 100vh;
 }
+
+
+@media screen and (max-width: 600px) {
+    .content-grid{
+        grid-template-areas: 
+        "hero hero"
+        "games games"
+        "posts posts"
+        ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80vh 1fr;
+    }
+}

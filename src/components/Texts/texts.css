@@ -1,4 +1,11 @@
 .logo-text{
     color:var(--secondary);
     font-size: 16px;
+   
+}
+
+@media screen and (max-width: 600px){
+.logo-text{
+    display: none;
+}
 }
