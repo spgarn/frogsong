@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-js-2426aa9e4367ee1b9620.js","mappings":"iKAQA,UANiB,IAET,2BAAK,W","sources":["webpack://gatsby-starter-hello-world/./src/pages/404.js"],"sourcesContent":["import React from 'react'\n\nconst NotFound = () => {\n    return (\n        <div>NotFound</div>\n    )\n}\n\nexport default NotFound"],"names":[],"sourceRoot":""}
