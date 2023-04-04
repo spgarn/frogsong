@@ -23,9 +23,7 @@
     gap:24px;
 }
 
-a{
-    color:var(--secondary2)
-}
+
 
 @media screen and (max-width:600px) {
     .logo{

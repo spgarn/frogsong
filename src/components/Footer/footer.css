@@ -1,0 +1,33 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:32px 24px;
+    gap:24px;
+}
+
+.ul-social{
+    display: flex;
+    gap:8px;
+    padding:0;
+    margin: 0;
+}
+
+.ul-social li a {
+    font-size: 20px;
+    line-height: 50px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s;
+    color:var(--background);
+    border-radius: 100%;
+    outline: none;
+    background-color: var(--primary2);
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,0 +1,30 @@
+.container {
+    height:400px;
+    position: relative;
+    background-color: var(--secondary);
+    margin-top: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:18px
+}
+
+.career-icon-container{
+    position: absolute;
+    left: 49.3%;
+    top:0;
+    margin-left: -43px;
+    margin-top: -43px;
+    background-color: var(--primary2);
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+
+.career-icon{
+    transform: rotate(315deg);
+}

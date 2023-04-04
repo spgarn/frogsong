@@ -4,6 +4,7 @@ import Hero from '../components/Hero/Hero'
 import Games from "../components/Games/Games"
 import Posts from "../components/Posts/Posts"
 import './index.css'
+import Career from "../components/Career/Career"
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
                 <Games style={{ gridArea: "games" }}></Games>
                 <Posts style={{ gridArea: "posts" }}></Posts>
             </div>
+            <Career />
         </Layout>
     )
 }

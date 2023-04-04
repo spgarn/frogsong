@@ -5,9 +5,6 @@ const Posts = ({ ...rest }) => {
     return (
         <div className='post-list' {...rest}>
             <PostCard />
-            <PostCard />
-            <PostCard />
-            <PostCard />
         </div>
     )
 }

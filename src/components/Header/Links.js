@@ -2,11 +2,10 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 const Links = () => {
+    const links = ['Projects', 'Posts', 'About']
     return (
         <>
-            <Link>Links</Link>
-            <Link>Links</Link>
-            <Link>Links</Link>
+            {links.map((link, i) => <Link to={`/${link.toLowerCase()}`} key={i}>{link}</Link>)}
         </>
     )
 }

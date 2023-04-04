@@ -5,9 +5,6 @@ const Games = ({ ...rest }) => {
     return (
         <div className='game-list' {...rest}>
             <GameCard />
-            <GameCard />
-            <GameCard />
-            <GameCard />
         </div>
     )
 }
