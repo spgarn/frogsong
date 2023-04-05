@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-position: center;
     height: 300px;
+    cursor: pointer;
 }
 
 .text-wrapper{
@@ -21,7 +22,7 @@
 .game-list{
     display: grid;
     gap:12px;
-    padding: 12px 24px;
+    padding: 12px 12px;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
 }
 @media screen and (max-width: 600px){

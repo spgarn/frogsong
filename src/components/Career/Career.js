@@ -8,7 +8,7 @@ const Career = () => {
     return (
         <div className='container'>
             <div className='career-icon-container'>
-                <i className='fab fa-twitch career-icon'></i>
+                <i aria-hidden="true" className='fa fa-gamepad fa-2x career-icon'></i>
             </div>
             <H1>Looking for job opportunities with Frogsong?</H1>
             <H2>We might have a number of available positions on our career page</H2>

@@ -21,23 +21,27 @@ h1{
     font-size: 36px;
     color:var(--primary2);
     margin:0;
+    text-shadow: 1px 1px black;
 }
 
 h2{
     font-size: 24px;
     color:var(--secondary2);
-     margin:0;
+    text-shadow: 1px 1px black;
+    margin:0;
 }
 
 h3{
     font-size: 16px;
     color:var(--primary2);
+    text-shadow: 1px 1px black;
     margin:0;
 }
 
 h4{
     font-size: 13px;
     color:var(--secondary2);
+    text-shadow: 1px 1px black;
     margin:0;
 }
 

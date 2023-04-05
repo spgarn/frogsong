@@ -16,6 +16,7 @@ const PostCard = () => {
                 <div key={post.id} className='post-card'>
                     <H3>{post.tile}</H3>
                     <H4>{post.text}</H4>
+                    <i class="fa fa-arrow-right right-arrow" aria-hidden="true"></i>
                 </div>
             )
         })

@@ -12,11 +12,12 @@
 
 .career-icon-container{
     position: absolute;
-    left: 49.3%;
+    left: 50%;
     top:0;
     margin-left: -43px;
     margin-top: -43px;
     background-color: var(--primary2);
+    color: var(--primary);
     width: 85px;
     height: 85px;
     display: flex;

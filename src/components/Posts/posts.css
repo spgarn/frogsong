@@ -1,8 +1,9 @@
 .post-list{
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-auto-columns: 1fr;
     row-gap: 12px;
-    padding: 12px 0;
+    padding: 12px 12px;
 }
 
 .post-card{
@@ -11,6 +12,18 @@
     flex-direction: column;
     background-color: var(--primary);
     height: 120px;
-    padding:12px 24px
+    cursor: pointer;
+    padding:12px 24px;
+    padding-right: 48px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space:break-spaces;
+    overflow: hidden;
+}
+
+.right-arrow{
+    position: absolute;
+    right:24px;
+    top:50%;
 }
 
