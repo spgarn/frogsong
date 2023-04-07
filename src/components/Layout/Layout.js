@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import './layout.css'
 import { fetchHeroDetails, fetchThemeDetails } from '../../utils/contentfulConnector'
 import { setTheme } from '../../utils/setTheme'
+import Loader from '../Loader/Loader'
 
 const Layout = ({ children }) => {
 
@@ -13,6 +14,8 @@ const Layout = ({ children }) => {
         setTheme(item)
     }, [])
 
+
+    if (!item) return <Loader></Loader>
 
 
 
