@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
     }, [])
 
 
-    if (!item) return <Loader></Loader>
+    if (!item) return
 
 
 

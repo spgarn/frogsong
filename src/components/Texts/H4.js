@@ -1,8 +1,8 @@
 import React from 'react'
 
-const H4 = ({ children, ...rest }) => {
+const H4 = ({ children, className, ...rest }) => {
     return (
-        <h4 {...rest} className='h4'>{children}</h4>
+        <h4 {...rest} className={`h4 ${className}`}>{children}</h4>
     )
 }
 

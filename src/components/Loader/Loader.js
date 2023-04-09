@@ -5,20 +5,20 @@ import './loader.css'
 const Loader = () => {
     return (
         <div className='loader'>
-            <div class="tophattop">
-                <div class="tophatbottom"></div>
+            <div className="tophattop">
+                <div className="tophatbottom"></div>
             </div>
-            <div id="head" class="frogface">
-                <div class="sunglasses"></div>
-                <div class="eye one">
-                    <div id="p" upilOne class="pupil one "></div>
+            <div id="head" className="frogface">
+                <div className="sunglasses"></div>
+                <div className="eye one">
+                    <div id="p" className="pupil one "></div>
                 </div>
-                <div class="eye two">
-                    <div id="p" upilTwo class="pupil two"></div>
+                <div className="eye two">
+                    <div id="p" className="pupil two"></div>
                 </div>
-                <div class="frogmouth">
-                    <div id="mouth" class="froglip">
-                        <div id="tongue" class=""></div>
+                <div className="frogmouth">
+                    <div id="mouth" className="froglip">
+                        <div id="tongue" className=""></div>
                     </div>
                 </div>
             </div>

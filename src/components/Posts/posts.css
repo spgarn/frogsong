@@ -4,6 +4,7 @@
     grid-auto-columns: 1fr;
     row-gap: 12px;
     padding: 12px 12px;
+    position: relative;
 }
 
 .post-card{
@@ -25,5 +26,45 @@
     position: absolute;
     right:24px;
     top:50%;
+    color:var(--primary2)
 }
+
+.post-area-top-text{
+    position: absolute;
+    top:-42px;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.post-area-bottom-text{
+    position: absolute;
+    bottom:-42px;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%);
+    text-decoration:underline;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px){
+    .post-area-bottom-text{
+        text-align: center;
+        position: inherit;
+        left:auto;
+        bottom:auto;
+        transform:none;
+    }
+    
+    .post-area-top-text{
+        text-align: center;
+        position:inherit;
+        left:auto;
+        top:auto;
+        transform:none;
+    }
+    
+    }
+
 

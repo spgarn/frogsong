@@ -5,7 +5,7 @@
     "games posts"
     ;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80vh 1fr;
+    grid-template-rows: 80vh 1fr min-content;
     min-height: 100vh;
 }
 
@@ -20,7 +20,7 @@
         "posts posts"
         ;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80vh 1fr;
+        grid-template-rows: 80vh 1fr min-content;
     }
     .videoTop{
         display: none;
@@ -51,4 +51,5 @@
     bottom: 0;
     left: 0;
     overflow: hidden;
+    z-index: -1;
 }

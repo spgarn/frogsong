@@ -1,8 +1,8 @@
 import React from 'react'
 
-const H1 = ({ children, ...rest }) => {
+const H1 = ({ children, className, ...rest }) => {
     return (
-        <h1 {...rest} className='h1'>{children}</h1>
+        <h1 {...rest} className={`h1 ${className}`}> {children}</h1 >
     )
 }
 

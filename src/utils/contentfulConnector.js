@@ -31,6 +31,19 @@ export async function fetchProjects() {
     }
 }
 
+export async function fetchBlogPosts() {
+
+    const entries = await client.getEntries({
+        content_type: 'blogPosts'
+    })
+
+    if (entries.items) {
+        return {
+            items: entries.items
+        }
+    }
+}
+
 export async function fetchThemeDetails() {
 
     const entry = await client.getEntry({

@@ -9,6 +9,25 @@
     cursor: pointer;
 }
 
+.game-area-top-text{
+    position: absolute;
+    top:-42px;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%);
+    width: 100%;
+}
+
+.game-area-bottom-text{
+    position: absolute;
+    bottom:-42px;
+    left:50%;
+    text-align: center;
+    transform: translate(-50%);
+    text-decoration:underline;
+    width: 100%;
+}
+
 .text-wrapper{
     display: flex;
     align-items: center;
@@ -24,8 +43,30 @@
     gap:12px;
     padding: 12px 12px;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    position: relative;
 }
+
+
+
 @media screen and (max-width: 600px){
-.game-list{ grid-template-columns:1fr;
+.game-list{ 
+    grid-template-columns:1fr;
 }
+
+.game-area-bottom-text{
+    text-align: center;
+    position: inherit;
+    left:auto;
+    bottom:auto;
+    transform:none;
+}
+
+.game-area-top-text{
+    text-align: center;
+    position:inherit;
+    left:auto;
+    top:auto;
+    transform:none;
+}
+
 }
