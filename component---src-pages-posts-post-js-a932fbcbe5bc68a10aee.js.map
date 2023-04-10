@@ -1,1 +1,0 @@
-{"version":3,"file":"component---src-pages-posts-post-js-a932fbcbe5bc68a10aee.js","mappings":"kKAQA,UANa,IAEL,2BAAK,O","sources":["webpack://gatsby-starter-hello-world/./src/pages/posts/post.js"],"sourcesContent":["import React from 'react'\n\nconst Post = () => {\n    return (\n        <div>Post</div>\n    )\n}\n\nexport default Post"],"names":[],"sourceRoot":""}
