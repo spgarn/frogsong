@@ -1,8 +1,8 @@
 
 
 const client = require('contentful').createClient({
-    space: '045dz9sj9myv',
-    accessToken: '3mBoTvGRBNK6Rw_cyAoHxrxLGXZ0dZnly809bBeOpdA'
+    space: process.env.GATSBY_SPACE_ID,
+    accessToken: process.env.GATSBY_ACCESS_TOKEN
 })
 
 export async function fetchHeroDetails() {

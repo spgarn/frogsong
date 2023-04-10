@@ -1,0 +1,25 @@
+.post-grid-container{
+    display: grid;
+    grid-template-areas: 
+    '.'
+    'header'
+    'text'
+    ;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10vh min-content 70vh;
+    padding:32px;
+    gap:12px
+}
+
+.blog-post-contenxt{
+    background-color: var(--secondary);
+    padding:32px;
+    border-radius: 32px;
+
+}
+
+@media screen and (max-width:600px) {
+    .blog-post-contenxt{
+        padding:12px;
+    }
+}

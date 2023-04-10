@@ -2,7 +2,7 @@ import React from 'react'
 
 const H1 = ({ children, className, ...rest }) => {
     return (
-        <h1 {...rest} className={`h1 ${className}`}> {children}</h1 >
+        <h1 {...rest} className={`h1 ${className && className}`}> {children}</h1 >
     )
 }
 
