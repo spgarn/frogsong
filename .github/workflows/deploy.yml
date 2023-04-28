@@ -12,10 +12,10 @@ jobs:
     environment: production
 
     steps:
-    - uses: actions/checkout@v1 # Equivalent to `git checkout master`
+    - uses: actions/checkout@v2
     
     - name: Install dependencies
       run: npm i
       
     - name: deploy project
-      run: npm run deploy --production
+      run: npm run deploy 
