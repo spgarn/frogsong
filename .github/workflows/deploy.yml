@@ -6,3 +6,15 @@ on:
       - main
   repository_dispatch:
    types: [contentful.deploy]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1 # Equivalent to `git checkout master`
+    
+    - name: Install dependencies
+      run: npm i
+      
+    - name: deploy project
+      run: npm run deploy
