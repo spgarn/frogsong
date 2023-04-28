@@ -19,6 +19,10 @@ jobs:
     - name: Install dependencies
       run: npm i
       
+    - name: github names
+      run:  git config --global user.name "spgarn"
+            git config --global user.email "simon.gartner@telia.com"
+      
     - name: deploy project
       run: npm run deploy
       
