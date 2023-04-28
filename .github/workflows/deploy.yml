@@ -18,4 +18,7 @@ jobs:
       run: npm i
       
     - name: deploy project
-      run: npm run deploy 
+      run: npm run deploy
+      env:
+        GATSBY_ACCESS_TOKEN: ${{secrets.GATSBY_ACCESS_TOKEN}}
+        GATSBY_SPACE_ID: ${{secrets.GATSBY_SPACE_ID}}
