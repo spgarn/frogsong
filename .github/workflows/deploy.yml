@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - gh-pages
   repository_dispatch:
    types: [contentful.deploy]
 jobs:
