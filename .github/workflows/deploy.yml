@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+  repository_dispatch:
+   types: [contentful.deploy]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Install dependencies
+      run: npm i
+      
+    - name: deploy project
+      run: npm run deploy 
