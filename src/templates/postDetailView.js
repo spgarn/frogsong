@@ -29,7 +29,6 @@ query postDetail($slug:String){
         __typename
       },
       slug
-    }
   }`
 
 
