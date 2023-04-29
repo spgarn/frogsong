@@ -21,6 +21,11 @@ jobs:
       with:
         repo-token: ${{secrets.GITHUB_TOKEN}}
         
+    - name: User fix 
+      run: | 
+        git config user.name spgarn 
+        git config user.email simon.gartner@telia.com git status
+        
     - name: Install dependencies
       run: npm i
       
