@@ -16,7 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: https://github.com/spgarn/frogsong/frogsong.git
+        repository: ${{github.repository}}
+        ref: main
+        token: ${{ secrets.GH_SECRET }}
+        
       
     - name: User fix
       run: |
