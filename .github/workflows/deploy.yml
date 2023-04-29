@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with:
-        repository: https://github.com/spgarn/frogsong.git
+        repository: spgarn/frogsong
         ref: main
         token: ${{ secrets.GH_SECRET }}
         
