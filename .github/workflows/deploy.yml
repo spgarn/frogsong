@@ -22,7 +22,7 @@ jobs:
       run: |
         git config user.name spgarn
         git config user.email simon.gartner@telia.com
-        git config --global url.https://$GH_SECRET@github.com/spgarn.insteadOf https://github.com/spgarn
+        git config --global url.https://$GH_SECRET@github.com/spgarn/frogsong.git.insteadOf https://github.com/spgarn
         git status
         
     - name: Install dependencies
