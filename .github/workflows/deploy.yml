@@ -22,9 +22,8 @@ jobs:
       run: |
         git config user.name spgarn
         git config user.email simon.gartner@telia.com
-        git config url.https://$GH_SECRET@github.com/spgarn.insteadOf https://github.com/spgarn
+        git config url.https://github.com/spgarn
         git status
-        console.log($GH_SECRET)
         
     - name: Install dependencies
       run: npm i
