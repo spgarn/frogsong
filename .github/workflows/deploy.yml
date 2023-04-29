@@ -16,7 +16,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        repository: https://github.com/spgarn/frogsong.git
+        repository: https://github.com/spgarn/frogsong/frogsong.git
       
     - name: User fix
       run: |
