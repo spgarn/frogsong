@@ -7,6 +7,7 @@ import './postDetailView.css'
 
 
 const postDetailView = ({ data }) => {
+    console.log(data)
     return (
         <Layout>
             <div className='post-grid-container'>
@@ -22,6 +23,13 @@ query postDetail($slug:String){
     contentfulBlogPosts(slug:{eq:$slug}) {
       id,
       title,
+      url {
+        file {
+          url
+          fileName
+          contentType
+        }
+      },
       contentText {
         raw,
         __typename
