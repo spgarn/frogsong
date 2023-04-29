@@ -17,9 +17,9 @@ jobs:
         MY_NAME: spgarn
         
     steps:
-    - uses: actions/labeler@v4
+    - uses: actions/checkout@v2
       with:
-        repo-token: ${{secrets.GITHUB_TOKEN}}
+        token: ${{secrets.GITHUB_TOKEN}}
         
     - name: Install dependencies
       run: npm i
