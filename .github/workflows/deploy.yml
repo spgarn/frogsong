@@ -14,6 +14,7 @@ jobs:
         GATSBY_ACCESS_TOKEN: ${{secrets.GATSBY_ACCESS_TOKEN}}
         GATSBY_SPACE_ID: ${{secrets.GATSBY_SPACE_ID}}
         GH_SECRET: ${{secrets.GH_SECRET}}
+        MY_NAME: spgarn
         
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +23,7 @@ jobs:
       run: |
         git config user.name spgarn
         git config user.email simon.gartner@telia.com
-        git config url https://github.com/spgarn
+        git remote set-url origin https://$MY_NAME:$GH_SECRET@github.com/spgarn/frogsong.git
         git status
         
     - name: Install dependencies
