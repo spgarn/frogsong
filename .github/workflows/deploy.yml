@@ -13,17 +13,16 @@ jobs:
     env:
         GATSBY_ACCESS_TOKEN: ${{secrets.GATSBY_ACCESS_TOKEN}}
         GATSBY_SPACE_ID: ${{secrets.GATSBY_SPACE_ID}}
+        GH_SECRET: ${{secrets.GH_SECRET}}
+        
     steps:
     - uses: actions/checkout@v3
-      with:
-        repository: spgarn/frogsong
-        ref: main
-        token: ${{ secrets.GH_SECRET }}
-        
+      
     - name: User fix
       run: |
         git config user.name github-actions
         git config user.email github-actions@github.com
+        git config --global url.https://$GH_ACCESS_TOKEN@github.com/.insteadOf https://github.com/
         
     - name: Install dependencies
       run: npm i
