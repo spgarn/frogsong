@@ -21,8 +21,8 @@ jobs:
       
     - name: User fix
       run: |
-        git config --global user.name "Simon Gärtner"
-        git config --global user.email "simon.gartner@telia.com"
+        git config user.name github-actions
+        git config user.email github-actions@github-private
         git config --list
       
     - name: deploy project
