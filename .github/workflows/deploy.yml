@@ -20,9 +20,9 @@ jobs:
       
     - name: User fix
       run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git config --global url.https://$GH_ACCESS_TOKEN@github.com/.insteadOf https://github.com/
+        git config user.name spgarn
+        git config user.email simon.gartner@telia.com
+        git config --global url.https://$GH_ACCESS_TOKEN@github-private/.insteadOf https://github.com/
         
     - name: Install dependencies
       run: npm i
