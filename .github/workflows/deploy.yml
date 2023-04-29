@@ -23,7 +23,7 @@ jobs:
       run: |
         git config user.name github-actions
         git config user.email github-actions@github-private
-        git remote set-url origin git@github-private:spgarn/frogsong.git
+        git remote set-url origin https://spgarn:${{ secrets.GH_SECRET }}@github-private:spgarn/frogsong.git
       
     - name: deploy project
       run: npm run deploy
