@@ -23,12 +23,19 @@ query postDetail($slug:String){
     contentfulBlogPosts(slug:{eq:$slug}) {
       id,
       title,
+      url {
+        file {
+          url
+          fileName
+          contentType
+        }
       },
       contentText {
         raw,
         __typename
       },
       slug
+    }
   }`
 
 
