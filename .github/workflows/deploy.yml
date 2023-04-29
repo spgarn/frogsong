@@ -17,7 +17,8 @@ jobs:
         MY_NAME: spgarn
         
     steps:
-    - uses: actions/checkout@v2
+    - name: Deploy GitHub Pages site
+      uses: actions/deploy-pages@v2.0.1
       with:
         token: ${{secrets.GITHUB_TOKEN}}
         
@@ -25,8 +26,8 @@ jobs:
       run: npm i
       
     - name: git names
-      run:  git config --global user.email "simon.gartner@telia.com"
-            git config --global user.name "Simon Gärtner"
+      run:  git config --add user.email "simon.gartner@telia.com"
+            git config --add user.name "Simon Gärtner"
       
     - name: deploy project
       run: npm run deploy
