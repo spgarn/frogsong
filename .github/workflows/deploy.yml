@@ -23,7 +23,7 @@ jobs:
       run: |
         git config user.name spgarn
         git config user.email simon.gartner@telia.com
-        git remote set-url origin https://$MY_NAME:$GH_SECRET@github.com/spgarn/frogsong.git
+        git remote set-url origin https://$MY_NAME:$GH_SECRET@github-private/spgarn/frogsong.git
         git status
         
     - name: Install dependencies
