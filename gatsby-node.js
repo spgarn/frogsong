@@ -11,10 +11,7 @@ exports.createPages = async ({ graphql, actions }) => {
               id,
               shortText,
               slug,
-              createdAt,
-              contentText {
-                raw
-              }
+              createdAt
             }
           }
         }

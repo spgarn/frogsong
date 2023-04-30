@@ -1,3 +1,4 @@
+import { removeMinutes } from './removeMinutes'
 
 
 const client = require('contentful').createClient({
@@ -8,7 +9,7 @@ const client = require('contentful').createClient({
 export async function fetchHeroDetails() {
 
     const entries = await client.getEntries({
-        content_type: 'homepageHero'
+        content_type: 'homepageHero',
     })
 
     if (entries.items) {
@@ -18,10 +19,29 @@ export async function fetchHeroDetails() {
     }
 }
 
-export async function fetchProjects() {
+export async function fetchProjectsLandingPage(limit) {
 
     const entries = await client.getEntries({
-        content_type: 'projects'
+        content_type: 'projects',
+        limit: limit || 200,
+
+    })
+
+    if (entries.items) {
+        return {
+            items: entries.items
+        }
+    }
+}
+
+export async function fetchBlogPostsLandingPage() {
+    const futureDate = removeMinutes(new Date(), 10)
+
+    const entries = await client.getEntries({
+        content_type: 'blogPosts',
+        limit: 4,
+        order: '-sys.createdAt',
+        'sys.createdAt[lt]': futureDate,
     })
 
     if (entries.items) {
@@ -34,7 +54,8 @@ export async function fetchProjects() {
 export async function fetchBlogPosts() {
 
     const entries = await client.getEntries({
-        content_type: 'blogPosts'
+        content_type: 'blogPosts',
+        order: '-sys.createdAt',
     })
 
     if (entries.items) {
@@ -53,5 +74,6 @@ export async function fetchThemeDetails() {
     if (entry) return entry
 
 }
+
 
 

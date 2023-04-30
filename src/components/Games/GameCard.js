@@ -5,7 +5,6 @@ import './games.css'
 
 const GameCard = ({ game }) => {
 
-
     return (
         <div style={{ backgroundImage: `url(${game.url.fields.file.url})` }} className='game-card'>
             <div className='text-wrapper'>

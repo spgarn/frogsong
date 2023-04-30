@@ -1,13 +1,14 @@
 import React from 'react'
 import GameCard from './GameCard'
-import { fetchProjects } from '../../utils/contentfulConnector'
+import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import H2 from '../Texts/H2'
 import H1 from '../Texts/H1'
 
 
 const Games = ({ ...rest }) => {
     const [projects, setProjects] = React.useState()
-    const items = fetchProjects()
+    const limitProjects = 6
+    const items = fetchProjectsLandingPage(limitProjects)
 
     React.useEffect(() => {
         items.then(response => setProjects(response))

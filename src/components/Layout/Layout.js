@@ -2,9 +2,8 @@ import React, { useEffect } from 'react'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './layout.css'
-import { fetchHeroDetails, fetchThemeDetails } from '../../utils/contentfulConnector'
+import { fetchThemeDetails } from '../../utils/contentfulConnector'
 import { setTheme } from '../../utils/setTheme'
-import Loader from '../Loader/Loader'
 
 const Layout = ({ children }) => {
 
