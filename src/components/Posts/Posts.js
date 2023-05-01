@@ -21,7 +21,7 @@ const Posts = ({ ...rest }) => {
             <H1 className='post-area-top-text'>Latest posts!</H1>
             {posts.items.map(post => {
                 const { fields } = post
-                return <PostCard key={fields.id} post={fields} />
+                return <PostCard key={fields.id} post={fields} to={`/posts/${fields.slug}`} />
             })}
             <H2 className='post-area-bottom-text'>View all posts</H2>
         </div>

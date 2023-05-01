@@ -14,7 +14,6 @@ import './postDetailView.css'
 
 
 const postDetailView = ({ data }) => {
-    console.log(data)
     const options = {
         renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => {

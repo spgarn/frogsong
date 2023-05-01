@@ -21,7 +21,7 @@ const Posts = () => {
     if (!posts) return <Loader />
     return (
         <Layout>
-            <div style={{ columnGap: '12px', marginTop: '50px' }} className='page-post-list'>{posts.items.map(post => <PostCard key={post.fields.id} post={post.fields}></PostCard>)}</div>
+            <div style={{ columnGap: '12px', marginTop: '50px' }} className='page-post-list'>{posts.items.map(post => <PostCard key={post.fields.id} post={post.fields} to={post.fields.slug}></PostCard>)}</div>
         </Layout>
     )
 }
