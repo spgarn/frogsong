@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-about-index-js-3727a6aaca688cb6bd61.js","mappings":"iKAQA,UANc,IAEN,2BAAK,Q","sources":["webpack://gatsby-starter-hello-world/./src/pages/about/index.js"],"sourcesContent":["import React from 'react'\n\nconst About = () => {\n    return (\n        <div>About</div>\n    )\n}\n\nexport default About"],"names":[],"sourceRoot":""}
