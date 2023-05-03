@@ -1,8 +1,8 @@
 import React from 'react'
+import Layout from '../../components/Layout/Layout'
 import { fetchBlogPosts } from '../../utils/contentfulConnector'
 import Loader from '../../components/Loader/Loader'
 import PostCard from '../../components/Posts/PostCard'
-import Layout from '../../components/Layout/Layout'
 import './postPage.css'
 
 
@@ -13,6 +13,7 @@ const Posts = () => {
 
     React.useEffect(() => {
         items.then(r => setPosts(r))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
+import Layout from '../../components/Layout/Layout'
 import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import GameCard from '../../components/Games/GameCard'
-import Layout from '../../components/Layout/Layout'
 import './projectPage.css'
 
 
@@ -11,6 +11,7 @@ const Projects = () => {
 
     React.useEffect(() => {
         items.then(response => setProjects(response))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (!projects) return

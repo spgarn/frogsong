@@ -3,6 +3,7 @@ import GameCard from './GameCard'
 import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import H2 from '../Texts/H2'
 import H1 from '../Texts/H1'
+import { Link } from 'gatsby'
 
 
 const Games = ({ ...rest }) => {
@@ -12,6 +13,7 @@ const Games = ({ ...rest }) => {
 
     React.useEffect(() => {
         items.then(response => setProjects(response))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (!projects) return
@@ -25,7 +27,9 @@ const Games = ({ ...rest }) => {
                 </React.Fragment>
             })}
 
-            <H2 className='game-area-bottom-text'>View all projects</H2>
+            <Link to={'/projects'}>
+                <H2 className='game-area-bottom-text'>View all projects</H2>
+            </Link>
         </div>
     )
 }

@@ -4,6 +4,7 @@ import './posts.css'
 import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
 import { fetchBlogPostsLandingPage } from '../../utils/contentfulConnector'
+import { Link } from 'gatsby'
 
 const Posts = ({ ...rest }) => {
 
@@ -12,6 +13,7 @@ const Posts = ({ ...rest }) => {
 
     React.useEffect(() => {
         items.then(response => setPosts(response))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     if (!posts) return
@@ -23,7 +25,9 @@ const Posts = ({ ...rest }) => {
                 const { fields } = post
                 return <PostCard key={fields.id} post={fields} to={`/posts/${fields.slug}`} />
             })}
-            <H2 className='post-area-bottom-text'>View all posts</H2>
+            <Link to={'/posts'}>
+                <H2 className='post-area-bottom-text'>View all posts</H2>
+            </Link>
         </div>
     )
 }

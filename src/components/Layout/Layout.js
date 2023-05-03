@@ -11,6 +11,7 @@ const Layout = ({ children }) => {
 
     useEffect(() => {
         setTheme(item)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
