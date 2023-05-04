@@ -1,0 +1,16 @@
+.styled-modal{
+    background-color: var(--background);
+    position: absolute;
+    inset: 90px 60px;
+    border: 1px solid rgb(204, 204, 204);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+}
+
+@media screen and (max-width: 600px){ 
+   .styled-modal{
+    inset:90px 15px
+   } 
+}

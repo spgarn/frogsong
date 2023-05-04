@@ -65,13 +65,27 @@ export async function fetchBlogPosts() {
     }
 }
 
+
 export async function fetchThemeDetails() {
 
-    const entry = await client.getEntry({
-        id: '5mar2WJMsNJ9YhjYl6IY8a'
-    })
+    const entry = await client.getEntry("5mar2WJMsNJ9YhjYl6IY8a")
+
 
     if (entry) return entry
+
+}
+export async function fetchTeamMembers() {
+
+    const entries = await client.getEntries({
+        content_type: 'team',
+    })
+
+
+    if (entries.items) {
+        return {
+            items: entries.items
+        }
+    }
 
 }
 

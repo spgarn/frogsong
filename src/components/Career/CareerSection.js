@@ -4,7 +4,7 @@ import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
 import Button from '../Button/Button'
 
-const Career = () => {
+const CareerSection = () => {
     return (
         <div className='container'>
             <div className='career-icon-container'>
@@ -17,4 +17,4 @@ const Career = () => {
     )
 }
 
-export default Career
+export default CareerSection

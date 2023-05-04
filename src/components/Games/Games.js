@@ -22,9 +22,7 @@ const Games = ({ ...rest }) => {
         <div className='game-list' {...rest}>
             <H1 className='game-area-top-text'>Latest projects!</H1>
             {projects.items.map(project => {
-                return <React.Fragment key={project.fields.id}>
-                    <GameCard game={project.fields} />
-                </React.Fragment>
+                return <GameCard key={project.fields.id} game={project.fields} />
             })}
 
             <Link to={'/projects'}>

@@ -62,7 +62,6 @@ query postDetail($slug:String){
           url 
         }
         ... on ContentfulBlogPosts {
-          contentful_id
           __typename
           title
           slug

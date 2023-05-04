@@ -5,7 +5,7 @@ import Hero from '../components/Hero/Hero'
 import Games from "../components/Games/Games"
 import Posts from "../components/Posts/Posts"
 import './index.css'
-import Career from "../components/Career/Career"
+import Career from "../components/Career/CareerSection"
 import { fetchHeroDetails } from "../utils/contentfulConnector"
 
 export default function Home() {

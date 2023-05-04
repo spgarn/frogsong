@@ -3,6 +3,7 @@ import Layout from '../../components/Layout/Layout'
 import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import GameCard from '../../components/Games/GameCard'
 import './projectPage.css'
+import PageHeader from '../../components/PageHeader/PageHeader'
 
 
 const Projects = () => {
@@ -17,6 +18,7 @@ const Projects = () => {
     if (!projects) return
     return (
         <Layout>
+            <PageHeader title={'Projects'} description={'This is where you will find all the different projects we have been involved with!'} />
             <div className='page-game-list' style={{ marginTop: '50px' }}>{projects.items.map(project => <GameCard game={project.fields}></GameCard>)}</div>
         </Layout >
     )
