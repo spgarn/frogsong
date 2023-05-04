@@ -14,10 +14,11 @@ import './postDetailView.css'
 
 
 const postDetailView = ({ data }) => {
+    console.log(data)
     const options = {
         renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                const asset = data.contentfulBlogPosts.contentText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
+                const asset = data.contentfulNews.contentText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
                 return (<img style={{ width: '25%', height: 'auto', borderRadius: '12px' }} src={asset.url} alt={asset.fileName}
                 />)
             }
@@ -32,8 +33,8 @@ const postDetailView = ({ data }) => {
     return (
         <Layout>
             <div className='post-grid-container'>
-                <H1 className="blog-post-contenxt" style={{ gridArea: 'header' }}>{data.contentfulBlogPosts.title}</H1>
-                <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulBlogPosts.contentText.raw), options)}</div>
+                <H1 className="blog-post-contenxt" style={{ gridArea: 'header' }}>{data.contentfulNews.title}</H1>
+                <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
             </div>
         </Layout>
     )
