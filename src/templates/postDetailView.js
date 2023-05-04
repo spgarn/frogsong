@@ -41,7 +41,7 @@ const postDetailView = ({ data }) => {
 
 export const query = graphql`
 query postDetail($slug:String){
-    contentfulBlogPosts(slug:{eq:$slug}) {
+    contentfulNews(slug:{eq:$slug}) {
       id,
       contentful_id,
       title,
@@ -61,7 +61,7 @@ query postDetail($slug:String){
           __typename
           url 
         }
-        ... on ContentfulBlogPosts {
+        ... on ContentfulNews {
           __typename
           title
           slug
