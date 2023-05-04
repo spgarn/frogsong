@@ -4,7 +4,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const { data } = await graphql(`
     query blogPosts {
-        allContentfulBlogPosts {
+        allContentfulNews {
           edges {
             node {
               title,
@@ -18,7 +18,7 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     `)
 
-    data.allContentfulBlogPosts.edges.forEach(edge => {
+    data.allContentfulNews.edges.forEach(edge => {
         actions.createPage({
             path: '/posts/' + edge.node.slug,
             component: path.resolve('./src/templates/postDetailView.js'),
