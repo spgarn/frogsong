@@ -5,7 +5,6 @@ import './career.css'
 import { getSocialsIcon } from '../../utils/getSocialsIcon'
 
 export const CareerCard = ({ employee }) => {
-    console.log(employee.socials.map(r => getSocialsIcon(r)))
     return (
         <>
 

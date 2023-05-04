@@ -20,7 +20,7 @@ const Footer = () => {
                 {links.map(link => {
                     return (
                         <li key={link.id} >
-                            <a target='_blank' href={link.url}>
+                            <a target='_blank' href={link.url} rel="noreferrer">
                                 <i className={link.class}></i>
                             </a>
                         </li>

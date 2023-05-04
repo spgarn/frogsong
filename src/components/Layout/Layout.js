@@ -4,6 +4,7 @@ import Footer from '../Footer/Footer'
 import './layout.css'
 import { fetchThemeDetails } from '../../utils/contentfulConnector'
 import { setTheme } from '../../utils/setTheme'
+import { Toaster } from 'react-hot-toast'
 
 const Layout = ({ children }) => {
 
@@ -21,6 +22,7 @@ const Layout = ({ children }) => {
 
     return (
         <div>
+            <Toaster></Toaster>
             <Header />
             <div>{children}</div>
             <Footer />

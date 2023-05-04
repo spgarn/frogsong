@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './hero.css'
 import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'

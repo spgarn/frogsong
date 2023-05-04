@@ -1,0 +1,22 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    background-color: var(--background);
+    padding:24px 0px;
+    border-bottom: solid var(--primary2) 2px;
+}
+
+.short-input{
+width:clamp(300px,50%,600px);
+border-radius: 8px;
+padding:12px;
+}
+
+.long-input{
+border-radius: 8px;
+width:clamp(300px,50%,600px);
+padding:12px
+}

@@ -7,6 +7,7 @@ import Posts from "../components/Posts/Posts"
 import './index.css'
 import Career from "../components/Career/CareerSection"
 import { fetchHeroDetails } from "../utils/contentfulConnector"
+import ContactForm from "../components/ContactForm/ContactForm"
 
 export default function Home() {
     const [heroData, setHeroData] = React.useState()
@@ -26,6 +27,7 @@ export default function Home() {
 
     return (
         <Layout>
+
             <div className="videoBg">
                 <video className="videoTop" src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" data-src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" loop="loop" muted="muted" autoPlay="autoplay" playsInline="playsinline"><track kind="captions"></track></video>
             </div>
@@ -35,6 +37,7 @@ export default function Home() {
                 <Posts style={{ gridArea: "posts" }}></Posts>
             </div>
             <Career />
+            <ContactForm></ContactForm>
         </Layout>
     )
 }

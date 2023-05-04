@@ -19,7 +19,7 @@ const Projects = () => {
     return (
         <Layout>
             <PageHeader title={'Projects'} description={'This is where you will find all the different projects we have been involved with!'} />
-            <div className='page-game-list' style={{ marginTop: '50px' }}>{projects.items.map(project => <GameCard game={project.fields}></GameCard>)}</div>
+            <div className='page-game-list' style={{ marginTop: '50px' }}>{projects.items.map(project => <GameCard key={project.fields.id} game={project.fields}></GameCard>)}</div>
         </Layout >
     )
 }
