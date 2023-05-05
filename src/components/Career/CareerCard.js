@@ -12,18 +12,21 @@ export const CareerCard = ({ employee }) => {
                 <img className='profile-image' src={employee.profile.fields.file.url} alt={employee.profile.fields.file.fileName} />
                 <H2>{employee.name}</H2>
                 <H3>{employee.role}</H3>
-                <ul className='employee-socials'>
-                    {employee.socials.map(url => {
-                        const social = getSocialsIcon(url)
-                        return (
-                            <li key={social.url} >
-                                <a target='_blank' href={social.url} rel='noreferrer'>
-                                    <i className={social.icon}></i>
-                                </a>
-                            </li>
-                        )
-                    })}
-                </ul>
+
+                {!!employee.social &&
+                    <ul className='employee-socials'>
+                        {employee.socials.map(url => {
+                            const social = getSocialsIcon(url)
+                            return (
+                                <li key={social.url} >
+                                    <a target='_blank' href={social.url} rel='noreferrer'>
+                                        <i className={social.icon}></i>
+                                    </a>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                }
             </div>
 
         </>
