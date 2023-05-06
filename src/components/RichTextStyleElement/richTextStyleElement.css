@@ -1,0 +1,32 @@
+.render-rich-text{
+border-top: 1px solid var(--primary);
+margin-top: 12px;
+display: flex;
+flex-direction: column;
+align-items: center;
+align-self: center;
+justify-content: center;
+width: clamp(300px,50%,1200px)
+}
+
+.render-rich-text-no-border{
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    width: clamp(300px,50%,1200px)
+    }
+
+.render-rich-text ul{
+align-self: flex-start;
+}
+
+.render-rich-text p:not(:first-child){
+    align-self: flex-start;
+}
+
+hr{
+    width: 100%;
+}

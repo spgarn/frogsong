@@ -3,10 +3,11 @@ import { JobCard } from './JobCard'
 import './career.css'
 
 
-const JobList = ({ employees, setSubject }) => {
+const JobList = ({ jobs, setSubject }) => {
+
     return (
         <div className='career-list'>
-            {employees.items.map(employee => <JobCard setSubject={setSubject} key={employee.fields.name} employee={employee.fields} />)}
+            {jobs?.items.map((job, id) => <JobCard setSubject={setSubject} key={id} job={job.fields} />)}
         </div>
     )
 }

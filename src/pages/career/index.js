@@ -4,33 +4,36 @@ import ContactFormJob from '../../components/ContactForm/contactFormJob'
 import React, { useState } from 'react'
 import CareerList from '../../components/Career/CareerList'
 import PageHeader from '../../components/PageHeader/PageHeader'
-import { fetchTeamMembers } from '../../utils/contentfulConnector'
+import { fetchJobOpenings, fetchTeamMembers } from '../../utils/contentfulConnector'
 import JobList from '../../components/Career/JobList'
 
 const Career = () => {
 
     const [employees, setEmployees] = React.useState()
+    const [jobItems, setJobItems] = React.useState()
     const [subject, setSubject] = useState('Career: General interest');
 
 
-    const items = fetchTeamMembers()
+    const teamMembers = fetchTeamMembers()
+    const jobs = fetchJobOpenings()
 
     React.useEffect(() => {
-        items.then(r => setEmployees(r))
+        teamMembers.then(r => setEmployees(r))
+        jobs.then(r => setJobItems(r))
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 
+    console.log(subject)
 
-
-    if (!employees) return <Loader />
+    if (!employees || !jobs) return <Loader />
 
     return (
         <Layout>
             <PageHeader title={'Career'} description={'This is where you find all our talented members of Frogsong studios!'} />
             <CareerList employees={employees}></CareerList>
             <PageHeader title={'Job Openings'} description={'Below you will find our current job openings!'} />
-            <JobList setSubject={setSubject} employees={employees}></JobList>
+            <JobList setSubject={setSubject} jobs={jobItems}></JobList>
             <ContactFormJob subject={subject}></ContactFormJob>
         </Layout>
     )

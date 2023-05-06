@@ -74,10 +74,26 @@ export async function fetchThemeDetails() {
     if (entry) return entry
 
 }
+
 export async function fetchTeamMembers() {
 
     const entries = await client.getEntries({
         content_type: 'team',
+    })
+
+
+    if (entries.items) {
+        return {
+            items: entries.items
+        }
+    }
+
+}
+
+export async function fetchJobOpenings() {
+
+    const entries = await client.getEntries({
+        content_type: 'jobOpenings',
     })
 
 
