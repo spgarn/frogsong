@@ -1,7 +1,7 @@
 .primary-button{
-    background-color: var(--primary2);
+    background-color: var(--complimentary);
     border-radius: 12px;
-    color:var(--primary);
+    color:var(--primary2);
     padding:12px 24px;
     border:0;
     cursor: pointer;

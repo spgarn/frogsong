@@ -25,7 +25,7 @@
     color:var(--background);
     border-radius: 100%;
     outline: none;
-    background-color: var(--primary2);
+    background-color: var(--complimentary);
     text-align: center;
 }
 

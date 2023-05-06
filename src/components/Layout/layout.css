@@ -17,7 +17,7 @@ body{
 
 h1{
     font-size: 36px;
-    color:var(--primary2);
+    color:var(--secondary);
     margin:0;
     text-shadow: 1px 1px black;
 }
@@ -31,7 +31,7 @@ h2{
 
 h3{
     font-size: 16px;
-    color:var(--primary2);
+    color:var(--secondary);
     text-shadow: 1px 1px black;
     margin:0;
 }
@@ -44,7 +44,7 @@ h4{
 }
 
 a{
-    color:var(--secondary2);
+    color:var(--complimentary);
     text-decoration:none;
 }
 
