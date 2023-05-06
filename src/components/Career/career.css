@@ -17,7 +17,7 @@
     top:0;
     margin-left: -43px;
     margin-top: -43px;
-    background-color: var(--primary2);
+    background-color: var(--complimentary);
     color: var(--primary);
     width: 85px;
     height: 85px;
@@ -62,7 +62,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: var(--primary);
     height: 300px;
     padding:12px;
     gap:8px;
