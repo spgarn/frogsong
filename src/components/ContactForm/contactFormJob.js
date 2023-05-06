@@ -10,7 +10,6 @@ import { toast } from 'react-hot-toast';
 
 export default function ContactFormJob({ subject }) {
     const [state, handleSubmit] = useForm("mayzvpqr");
-    console.log(subject)
 
     useEffect(() => {
         if (state.succeeded) toast.success('Message successfully sent!');

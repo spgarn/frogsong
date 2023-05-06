@@ -24,7 +24,6 @@ const Career = () => {
     }, [])
 
 
-    console.log(subject)
 
     if (!employees || !jobs) return <Loader />
 
