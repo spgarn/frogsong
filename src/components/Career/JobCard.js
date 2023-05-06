@@ -4,7 +4,6 @@ import H3 from '../Texts/H3'
 import H2 from '../Texts/H2'
 import H4 from '../Texts/H4'
 import ModalDialog from '../Modal/ModalDialog'
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import RichTextStyleElement from '../RichTextStyleElement/RichTextStyleElement'
 
 export const JobCard = ({ job, setSubject }) => {
