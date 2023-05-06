@@ -5,7 +5,7 @@
     align-items: center;
     gap:20px;
     background-color: var(--background);
-    padding:24px 0px;
+    padding:24px 12px;
     border-bottom: solid var(--primary) 2px;
 }
 
