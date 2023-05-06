@@ -1,8 +1,8 @@
 import React from 'react'
+import Button from '../Button/Button'
 import './career.css'
 import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
-import Button from '../Button/Button'
 import { Link } from 'gatsby'
 
 const CareerSection = () => {

@@ -1,13 +1,13 @@
 import * as React from "react"
+import './index.css'
 import Layout from "../components/Layout/Layout"
 import Loader from "../components/Loader/Loader"
 import Hero from '../components/Hero/Hero'
 import Games from "../components/Games/Games"
 import Posts from "../components/Posts/Posts"
-import './index.css'
-import Career from "../components/Career/CareerSection"
-import { fetchHeroDetails } from "../utils/contentfulConnector"
 import ContactForm from "../components/ContactForm/ContactForm"
+import { fetchHeroDetails } from "../utils/contentfulConnector"
+import Career from "../components/Career/CareerSection"
 
 export default function Home() {
     const [heroData, setHeroData] = React.useState()

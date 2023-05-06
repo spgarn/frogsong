@@ -1,15 +1,16 @@
 // Make sure to run npm install @formspree/react
 // For more help visit https://formspr.ee/react-help
 import React, { useEffect } from 'react';
-import Button from '../Button/Button';
 import { useForm, ValidationError } from '@formspree/react';
+import Button from '../Button/Button';
 import './contactForm.css'
 import H1 from '../Texts/H1';
 import H4 from '../Texts/H4';
 import { toast } from 'react-hot-toast';
 
-export default function ContactForm() {
+export default function ContactFormJob({ subject }) {
     const [state, handleSubmit] = useForm("mayzvpqr");
+
 
     useEffect(() => {
         if (state.succeeded) toast.success('Message successfully sent!');
@@ -19,14 +20,14 @@ export default function ContactForm() {
     return (
         <>
             <form className='contact-form' onSubmit={handleSubmit}>
-                <H1>CONTACT US</H1>
-                <H4>"An e-mail a day keeps an empty inbox away!" - Olle</H4>
+                <H1>Application</H1>
+                <H4>Click on the job opening that interests you above and then enter your email and message!</H4>
                 <input
                     id="email"
                     type="email"
                     name="email"
                     className='short-input'
-                    placeholder='Email'
+                    placeholder='Enter your email here'
                     required
                     disabled={state.succeeded}
                 />
@@ -35,7 +36,7 @@ export default function ContactForm() {
                     field="email"
                     errors={state.errors}
                 />
-                <input type="hidden" name="subject" value="job"></input>
+                <input disabled className='short-input' name="subject" value={`Career: ${subject}`}></input>
                 <textarea
                     id="message"
                     name="message"

@@ -1,7 +1,7 @@
 import React from 'react'
+import './pageHeader.css'
 import H1 from '../Texts/H1'
 import H4 from '../Texts/H4'
-import './pageHeader.css'
 
 const PageHeader = ({ title, description }) => {
     return (

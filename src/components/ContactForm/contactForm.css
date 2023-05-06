@@ -6,7 +6,7 @@
     gap:20px;
     background-color: var(--background);
     padding:24px 0px;
-    border-bottom: solid var(--primary2) 2px;
+    border-bottom: solid var(--primary) 2px;
 }
 
 .short-input{
