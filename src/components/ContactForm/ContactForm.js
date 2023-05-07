@@ -35,7 +35,7 @@ export default function ContactForm() {
                     field="email"
                     errors={state.errors}
                 />
-                <input type="hidden" name="subject" value="job"></input>
+                <input type="hidden" name="subject" value="Open question"></input>
                 <textarea
                     id="message"
                     name="message"
