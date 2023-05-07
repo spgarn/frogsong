@@ -3,8 +3,8 @@ import Layout from '../components/Layout/Layout'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
-import H1 from '../components/Texts/H1'
 import './postDetailView.css'
+import PageHeader from '../components/PageHeader/PageHeader';
 
 
 
@@ -32,7 +32,7 @@ const postDetailView = ({ data }) => {
     return (
         <Layout>
             <div className='post-grid-container'>
-                <H1 className="blog-post-contenxt" style={{ gridArea: 'header' }}>{data.contentfulNews.title}</H1>
+                <PageHeader style={{ gridArea: 'header' }} title={data.contentfulNews.title}></PageHeader>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
             </div>
         </Layout>
