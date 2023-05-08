@@ -18,7 +18,7 @@ const GameCard = ({ game }) => {
 
 
     return (
-        <div role='presentation' onClick={() => setIsOpen(true)} onKeyDown={() => setIsOpen(true)} style={{ backgroundImage: `url(${game.url.fields.file.url})` }} className='game-card'>
+        <div role='presentation' onClick={() => setIsOpen(true)} onKeyDown={() => setIsOpen(true)} style={{ backgroundImage: `url(${game.url.fields.file.url}?w=400&h=400&fit=fill&f=center)` }} className='game-card'>
             <div className='text-wrapper'>
                 <H3>{game.title}</H3>
                 <H4>{game.infoText}</H4>

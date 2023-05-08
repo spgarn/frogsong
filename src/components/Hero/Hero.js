@@ -10,7 +10,7 @@ const Hero = ({ heroData, ...rest }) => {
 
     return (
         <div  {...rest}>
-            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url})` }} className='hero'>
+            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url})?w=1000&h=820&fit=fill&f=center` }} className='hero'>
 
                 <H1 style={{ padding: '0px 12px' }}>SpellSworn</H1>
                 <H2 style={{ padding: '0px 12px' }}>Enter a world of magic and battle, where your wits and reflexes

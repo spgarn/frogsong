@@ -8,7 +8,7 @@ const RichTextStyleElement = ({ children, isBorder = false }) => {
     const options = {
         renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => {
-                return (<img style={{ width: '80%', height: 'auto', borderRadius: '12px' }} src={node.data.target.fields.file.url} alt={node.data.target.fields.file.fileName}
+                return (<img style={{ width: '80%', height: 'auto', borderRadius: '12px' }} src={`${node.data.target.fields.file.url}?w=600&h=600&fit=fill&f=center`} alt={node.data.target.fields.file.fileName}
                 />)
             }
         }
