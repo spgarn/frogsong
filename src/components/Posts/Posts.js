@@ -5,18 +5,16 @@ import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
 import { fetchBlogPostsLandingPage } from '../../utils/contentfulConnector'
 import { Link } from 'gatsby'
+import { useQuery } from '@tanstack/react-query'
+import Loader from '../Loader/Loader'
 
 const Posts = ({ ...rest }) => {
 
-    const [posts, setPosts] = React.useState()
-    const items = fetchBlogPostsLandingPage()
+    const { data: posts, isLoading } = useQuery(['landingBlogPosts'], async () => {
+        return await fetchBlogPostsLandingPage();
+    });
 
-    React.useEffect(() => {
-        items.then(response => setPosts(response))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    if (!posts) return
+    if (isLoading) return <Loader />
 
     return (
         <div className='post-list' {...rest}>

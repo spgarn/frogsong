@@ -1,6 +1,5 @@
 import * as React from "react"
 import './index.css'
-import Layout from "../components/Layout/Layout"
 import Loader from "../components/Loader/Loader"
 import Hero from '../components/Hero/Hero'
 import Games from "../components/Games/Games"
@@ -8,16 +7,14 @@ import Posts from "../components/Posts/Posts"
 import ContactForm from "../components/ContactForm/ContactForm"
 import { fetchHeroDetails } from "../utils/contentfulConnector"
 import Career from "../components/Career/CareerSection"
+import { useQuery } from "@tanstack/react-query"
 
 export default function Home() {
-    const [heroData, setHeroData] = React.useState()
+    const { data: heroData, isLoading } = useQuery(['heroData'], async () => {
+        return await fetchHeroDetails();
+    });
 
-    const items = fetchHeroDetails()
-
-    React.useEffect(() => {
-        items.then(r => setHeroData(r))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
+    if (isLoading) return <Loader />
 
 
 
@@ -26,7 +23,7 @@ export default function Home() {
 
 
     return (
-        <Layout>
+        <>
 
             <div className="videoBg">
                 <video className="videoTop" src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" data-src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" loop="loop" muted="muted" autoPlay="autoplay" playsInline="playsinline"><track kind="captions"></track></video>
@@ -38,6 +35,6 @@ export default function Home() {
             </div>
             <Career />
             <ContactForm></ContactForm>
-        </Layout>
+        </>
     )
 }

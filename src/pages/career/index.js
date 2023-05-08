@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout/Layout'
+
 import Loader from '../../components/Loader/Loader'
 import ContactFormJob from '../../components/ContactForm/contactFormJob'
 import React, { useState } from 'react'
@@ -6,35 +6,31 @@ import CareerList from '../../components/Career/CareerList'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import { fetchJobOpenings, fetchTeamMembers } from '../../utils/contentfulConnector'
 import JobList from '../../components/Career/JobList'
+import { useQuery } from '@tanstack/react-query'
 
 const Career = () => {
 
-    const [employees, setEmployees] = React.useState()
-    const [jobItems, setJobItems] = React.useState()
+    const { data: teamMembers, isLoading: teamIsLoading } = useQuery(['teamMembers'], async () => {
+        return await fetchTeamMembers();
+    });
+    const { data: jobs, isLoading } = useQuery(['jobs'], async () => {
+        return await fetchJobOpenings();
+    });
+
+
     const [subject, setSubject] = useState('Career: General interest');
 
+    if (isLoading || teamIsLoading) return <Loader />
 
-    const teamMembers = fetchTeamMembers()
-    const jobs = fetchJobOpenings()
-
-    React.useEffect(() => {
-        teamMembers.then(r => setEmployees(r))
-        jobs.then(r => setJobItems(r))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-
-
-    if (!employees || !jobs) return <Loader />
 
     return (
-        <Layout>
+        <>
             <PageHeader title={'Career'} description={'This is where you find all our talented members of Frogsong studios!'} />
-            <CareerList employees={employees}></CareerList>
+            <CareerList employees={teamMembers}></CareerList>
             <PageHeader title={'Job Openings'} description={'Below you will find our current job openings!'} />
-            <JobList setSubject={setSubject} jobs={jobItems}></JobList>
+            <JobList setSubject={setSubject} jobs={jobs}></JobList>
             <ContactFormJob subject={subject}></ContactFormJob>
-        </Layout>
+        </>
     )
 }
 

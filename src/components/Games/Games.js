@@ -4,19 +4,17 @@ import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import H2 from '../Texts/H2'
 import H1 from '../Texts/H1'
 import { Link } from 'gatsby'
+import Loader from '../Loader/Loader'
+import { useQuery } from '@tanstack/react-query'
 
 
 const Games = ({ ...rest }) => {
-    const [projects, setProjects] = React.useState()
     const limitProjects = 6
-    const items = fetchProjectsLandingPage(limitProjects)
+    const { data: projects, isLoading } = useQuery(['LandingProjcets'], async () => {
+        return await fetchProjectsLandingPage(limitProjects);
+    });
 
-    React.useEffect(() => {
-        items.then(response => setProjects(response))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    if (!projects) return
+    if (isLoading) return <Loader />
 
     return (
         <div className='game-list' {...rest}>

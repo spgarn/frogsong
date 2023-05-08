@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout/Layout'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
@@ -30,12 +29,12 @@ const postDetailView = ({ data }) => {
         }
     }
     return (
-        <Layout>
+        <>
             <div className='post-grid-container'>
                 <PageHeader style={{ gridArea: 'header' }} title={data.contentfulNews.title}></PageHeader>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
             </div>
-        </Layout>
+        </>
     )
 }
 
