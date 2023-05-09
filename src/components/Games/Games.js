@@ -14,7 +14,7 @@ const Games = ({ ...rest }) => {
         return await fetchProjectsLandingPage(limitProjects);
     });
 
-    if (isLoading) return <Loader />
+    if (isLoading) return
 
     return (
         <div className='game-list' {...rest}>

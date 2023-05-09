@@ -7,19 +7,15 @@ import H2 from '../Texts/H2'
 const Hero = ({ heroData, ...rest }) => {
 
 
-
     return (
         <div  {...rest}>
-            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url})?w=1000&h=820&fit=fill&f=center` }} className='hero'>
+            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url}?w=600&h=600&fit=fill&f=center)` }} className='hero'>
 
-                <H1 style={{ padding: '0px 12px' }}>SpellSworn</H1>
-                <H2 style={{ padding: '0px 12px' }}>Enter a world of magic and battle, where your wits and reflexes
-                    will be pushed to their limits! Choose your spells, enter the
-                    everchanging arena and prepare to obliterate all who stand in
-                    your way!</H2>
-                <span style={{ padding: '0px 12px' }}>
+                <H1 style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>
+                <H2 style={{ padding: '0px 12px' }}>{heroData.fields.subhead}</H2>
+                <a target='_blank' href={heroData.fields.buttonLink} rel="noreferrer" style={{ padding: '0px 12px' }}>
                     <Button>Try it out!</Button>
-                </span>
+                </a>
 
             </div>
         </div >

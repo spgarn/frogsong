@@ -5,6 +5,7 @@ import './loader.css'
 const Loader = () => {
     return (
         <div className='loader'>
+
             <div className="tophattop">
                 <div className="tophatbottom"></div>
             </div>

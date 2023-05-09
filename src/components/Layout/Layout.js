@@ -3,22 +3,29 @@ import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 import './layout.css'
 import { Toaster } from 'react-hot-toast'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { fetchThemeDetails } from '../../utils/contentfulConnector'
+import { useQuery } from '@tanstack/react-query'
+import Loader from '../Loader/Loader'
+import { setTheme } from '../../utils/setTheme'
 
-const queryClient = new QueryClient();
 
 const Layout = ({ children }) => {
+    const { isLoading, data: theme } = useQuery(['Theme'], async () => {
+        return await fetchThemeDetails();
+    });
 
+    if (isLoading) return <Loader />
 
+    setTheme(theme)
 
     return (
-        <QueryClientProvider client={queryClient}>
+        <>
             <Toaster></Toaster>
             <Header />
             <div>{children}</div>
             <Footer />
 
-        </QueryClientProvider>
+        </>
     )
 }
 

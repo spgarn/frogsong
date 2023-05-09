@@ -14,7 +14,7 @@ const Posts = ({ ...rest }) => {
         return await fetchBlogPostsLandingPage();
     });
 
-    if (isLoading) return <Loader />
+    if (isLoading) return
 
     return (
         <div className='post-list' {...rest}>

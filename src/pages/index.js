@@ -14,19 +14,16 @@ export default function Home() {
         return await fetchHeroDetails();
     });
 
+
     if (isLoading) return <Loader />
 
-
-
-
-    if (!heroData) return <Loader />
 
 
     return (
         <>
 
             <div className="videoBg">
-                <video className="videoTop" src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" data-src="https://bnetcmsus-a.akamaihd.net/cms/template_resource/1B4KFNJOIF1Z1663613392229.webm" loop="loop" muted="muted" autoPlay="autoplay" playsInline="playsinline"><track kind="captions"></track></video>
+                <video className="videoTop" src={heroData.items[0].fields.video.fields.file.url} data-src={heroData.items[0].fields.video.fields.file.url} loop="loop" muted="muted" autoPlay="autoplay" playsInline="playsinline"><track kind="captions"></track></video>
             </div>
             <div className="content-grid">
                 <Hero heroData={heroData.items[0]} style={{ gridArea: "hero" }}></Hero>
