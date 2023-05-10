@@ -7,6 +7,45 @@
     position: relative;
 }
 
+.post-card-author{
+    display: grid;
+    grid-auto-columns: min-content auto;
+    grid-auto-rows: min-content;
+    column-gap:12px;
+    grid-template-areas: 
+    'image name'
+    'image date'
+    ;
+}
+
+.post-card-new{
+    border-radius: 12px;
+    display: grid;
+    height: 120px;
+    /* grid-template-areas: 
+    'image title'
+    'image description'
+    'image author'
+    ; */
+    grid-template-areas: 
+    'title'
+    'description'
+    'author'
+    ;
+    gap:8px;
+    /* grid-auto-columns: 2fr 6fr; */
+    grid-auto-columns: auto;
+    background-color: var(--primary);
+    cursor: pointer;
+    padding:12px 24px;
+    padding-right: 48px;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space:break-spaces;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px 1px white;
+}
+
 .post-card{
     border-radius: 12px;
     display: flex;
@@ -49,6 +88,17 @@
     width: 100%;
 }
 
+/* @media screen and (max-width: 850px){
+    .post-card-new{
+        grid-auto-columns: auto;
+        grid-template-areas: 
+        'title'
+        'description'
+        'author'
+        ;
+    }
+    
+    } */
 @media screen and (max-width: 600px){
     .post-area-bottom-text{
         text-align: center;

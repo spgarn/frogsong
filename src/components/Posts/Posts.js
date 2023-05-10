@@ -7,6 +7,7 @@ import { fetchBlogPostsLandingPage } from '../../utils/contentfulConnector'
 import { Link } from 'gatsby'
 import { useQuery } from '@tanstack/react-query'
 import Loader from '../Loader/Loader'
+import PostCardNew from './PostCardNew'
 
 const Posts = ({ ...rest }) => {
 
@@ -21,7 +22,8 @@ const Posts = ({ ...rest }) => {
             <H1 className='post-area-top-text'>Latest posts!</H1>
             {posts.items.map(post => {
                 const { fields } = post
-                return <PostCard key={fields.id} post={fields} to={`/posts/${fields.slug}`} />
+                const { createdAt } = post.sys
+                return <PostCardNew key={fields.id} post={fields} createdAt={createdAt} to={`/posts/${fields.slug}`} />
             })}
             <Link to={'/posts'}>
                 <H2 className='post-area-bottom-text'>View all posts</H2>
