@@ -60,11 +60,6 @@ query postDetail($slug:String){
           __typename
           url 
         }
-        ... on ContentfulNews {
-          __typename
-          title
-          slug
-        }
       }
       },
       slug
