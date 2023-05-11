@@ -9,6 +9,22 @@
     padding: 20px;
 }
 
+.modal-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-cross-close{
+    transform: rotate(45deg);
+    font-size: 40px;
+    position: absolute;
+    color:white;
+    right:15px;
+    top:0;
+    cursor: pointer;
+}
+
 @media screen and (max-width: 600px){ 
    .styled-modal{
     inset:90px 15px
