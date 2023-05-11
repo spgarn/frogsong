@@ -8,8 +8,7 @@ import ContactForm from "../components/ContactForm/ContactForm"
 import { fetchHeroDetails } from "../utils/contentfulConnector"
 import Career from "../components/Career/CareerSection"
 import { useQuery } from "@tanstack/react-query"
-import PageHeader from "../components/PageHeader/PageHeader"
-import Youtube from "../components/Youtube/Youtube"
+import SocialMedia from "../components/SocialMedia/SocialMedia"
 
 export default function Home() {
     const { data: heroData, isLoading } = useQuery(['heroData'], async () => {
@@ -33,7 +32,7 @@ export default function Home() {
                 <Posts style={{ gridArea: "posts" }}></Posts>
             </div>
             <Career />
-            <Youtube />
+            <SocialMedia />
             <ContactForm></ContactForm>
         </>
     )
