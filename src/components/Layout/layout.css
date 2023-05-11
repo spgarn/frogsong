@@ -58,3 +58,8 @@ a:hover{
     opacity: 0.85;
     color:var(--complimentary)
 }
+
+a[aria-current=page]{
+    opacity: 0.85;
+    color:var(--complimentary)
+}
