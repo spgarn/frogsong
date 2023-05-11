@@ -12,7 +12,6 @@ const ModalDialog = ({ isOpen, onRequestClose, children }) => {
             className='styled-modal'
             onRequestClose={onRequestClose}
             isOpen={isOpen}
-            contentLabel="Example Modal"
         >{children}</Modal>
     )
 }

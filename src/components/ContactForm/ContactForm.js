@@ -7,6 +7,7 @@ import './contactForm.css'
 import H1 from '../Texts/H1';
 import H4 from '../Texts/H4';
 import { toast } from 'react-hot-toast';
+import PageHeader from '../PageHeader/PageHeader';
 
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("mayzvpqr");
@@ -17,10 +18,12 @@ export default function ContactForm() {
     }, [state.succeeded, state.errors.length])
 
     return (
-        <>
+        <div style={{ backgroundColor: 'var(--secondary)', position: 'relative' }}>
+            <div className='contact-icon-container'>
+                <i aria-hidden="true" className='fa fa-pen fa-2x career-icon'></i>
+            </div>
             <form className='contact-form' onSubmit={handleSubmit}>
-                <H1>CONTACT US</H1>
-                <H4>"An e-mail a day keeps an empty inbox away!" - Olle</H4>
+                <PageHeader title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} />
                 <input
                     id="email"
                     type="email"
@@ -54,6 +57,6 @@ export default function ContactForm() {
                     Send!
                 </Button>
             </form>
-        </>
+        </div>
     );
 }

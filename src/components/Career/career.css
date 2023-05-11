@@ -1,5 +1,4 @@
 .container {
-    height:400px;
     position: relative;
     background-color: var(--secondary);
     margin-top: 82px;
@@ -9,6 +8,7 @@
     flex-direction: column;
     gap:18px;
     padding:24px 12px;
+    padding-bottom: 100px;
 }
 
 .career-icon-container{

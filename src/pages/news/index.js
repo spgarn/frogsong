@@ -8,7 +8,7 @@ import { useQuery } from '@tanstack/react-query';
 import PostCardNew from '../../components/Posts/PostCardNew'
 
 
-const Posts = () => {
+const News = () => {
 
     const { data: posts, isLoading } = useQuery(['blogPosts'], async () => {
         return await fetchBlogPosts();
@@ -27,4 +27,4 @@ const Posts = () => {
     )
 }
 
-export default Posts
+export default News

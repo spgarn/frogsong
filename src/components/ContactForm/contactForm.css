@@ -4,7 +4,6 @@
     justify-content: center;
     align-items: center;
     gap:20px;
-    background-color: var(--background);
     padding:24px 12px;
     border-bottom: solid var(--primary) 2px;
 }
@@ -19,4 +18,20 @@ padding:12px;
 border-radius: 8px;
 width:clamp(300px,50%,600px);
 padding:12px
+}
+
+.contact-icon-container{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left: -43px;
+    margin-top: -43px;
+    background-color: var(--complimentary);
+    color: var(--primary);
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
 }

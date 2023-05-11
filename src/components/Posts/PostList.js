@@ -1,15 +1,13 @@
 import React from 'react'
-import PostCard from './PostCard'
 import './posts.css'
 import H1 from '../Texts/H1'
 import H2 from '../Texts/H2'
 import { fetchBlogPostsLandingPage } from '../../utils/contentfulConnector'
 import { Link } from 'gatsby'
 import { useQuery } from '@tanstack/react-query'
-import Loader from '../Loader/Loader'
 import PostCardNew from './PostCardNew'
 
-const Posts = ({ ...rest }) => {
+const PostList = ({ ...rest }) => {
 
     const { data: posts, isLoading } = useQuery(['landingBlogPosts'], async () => {
         return await fetchBlogPostsLandingPage();
@@ -19,17 +17,17 @@ const Posts = ({ ...rest }) => {
 
     return (
         <div className='post-list' {...rest}>
-            <H1 className='post-area-top-text'>Latest posts!</H1>
+            <H1 className='post-area-top-text'>Latest news!</H1>
             {posts.items.map(post => {
                 const { fields } = post
                 const { createdAt } = post.sys
-                return <PostCardNew key={fields.id} post={fields} createdAt={createdAt} to={`/posts/${fields.slug}`} />
+                return <PostCardNew key={fields.id} post={fields} createdAt={createdAt} to={`/news/${fields.slug}`} />
             })}
-            <Link to={'/posts'}>
-                <H2 className='post-area-bottom-text'>View all posts</H2>
+            <Link to={'/news'}>
+                <H2 className='post-area-bottom-text'>View all news</H2>
             </Link>
         </div>
     )
 }
 
-export default Posts
+export default PostList

@@ -3,11 +3,13 @@ import './index.css'
 import Loader from "../components/Loader/Loader"
 import Hero from '../components/Hero/Hero'
 import Games from "../components/Games/Games"
-import Posts from "../components/Posts/Posts"
+import Posts from "../components/Posts/PostList"
 import ContactForm from "../components/ContactForm/ContactForm"
 import { fetchHeroDetails } from "../utils/contentfulConnector"
 import Career from "../components/Career/CareerSection"
 import { useQuery } from "@tanstack/react-query"
+import PageHeader from "../components/PageHeader/PageHeader"
+import Youtube from "../components/Youtube/Youtube"
 
 export default function Home() {
     const { data: heroData, isLoading } = useQuery(['heroData'], async () => {
@@ -31,6 +33,7 @@ export default function Home() {
                 <Posts style={{ gridArea: "posts" }}></Posts>
             </div>
             <Career />
+            <Youtube />
             <ContactForm></ContactForm>
         </>
     )

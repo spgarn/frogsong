@@ -1,0 +1,32 @@
+.iframe-wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.youtube-container{
+    position: relative;
+    margin-bottom: 100px;
+    padding:24px 12px;
+}
+
+.iframe-wrapper iframe{
+    height: clamp(170px,39.5vw,505px);
+    width: clamp(300px,70vw,900px);
+}
+
+.youtube-icon-container{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left: -43px;
+    margin-top: -43px;
+    background-color: var(--complimentary);
+    color: var(--primary);
+    width: 85px;
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+}

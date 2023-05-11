@@ -1,9 +1,8 @@
 import React from 'react'
 import Button from '../Button/Button'
 import './career.css'
-import H1 from '../Texts/H1'
-import H2 from '../Texts/H2'
 import { Link } from 'gatsby'
+import PageHeader from '../PageHeader/PageHeader'
 
 const CareerSection = () => {
     return (
@@ -11,8 +10,7 @@ const CareerSection = () => {
             <div className='career-icon-container'>
                 <i aria-hidden="true" className='fa fa-gamepad fa-2x career-icon'></i>
             </div>
-            <H1>Looking for job opportunities with Frogsong?</H1>
-            <H2>We might have a number of available positions on our career page</H2>
+            <PageHeader title={'Looking for job opportunities with Frogsong?'} subTitle={'We might have a number of available positions on our career page'} />
             <Link to="/career">
                 <Button>Read more</Button>
             </Link>
