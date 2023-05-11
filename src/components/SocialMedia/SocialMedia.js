@@ -12,7 +12,7 @@ const SocialMedia = () => {
             <PageHeader title={'Be sure to keep updated!'} description={'Be sure to check out all our videos and follow us on twitter!!'} />
             <div className='social-wrapper'>
                 <TwitterContainer className="social-item" />
-                <iframe className='social-item' src="https://www.youtube.com/embed?listType=playlist&list=UUzIvDyGvG8HJEsWY8ZfxATw"></iframe>
+                <iframe title="youtube-embed" className='social-item' src="https://www.youtube.com/embed?listType=playlist&list=UUzIvDyGvG8HJEsWY8ZfxATw"></iframe>
             </div>
         </div>
     )

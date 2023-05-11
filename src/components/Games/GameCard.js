@@ -27,7 +27,6 @@ const GameCard = ({ game }) => {
                 <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center' }}>
                     <H1>{game.title}</H1>
                     <H3>{game.infoText}</H3>
-                    {/* <div style={{ borderTop: '1px solid var(--primary)', marginTop: '12px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'left' }}>{documentToReactComponents(game.detailedText, options)}</div> */}
                     <RichTextStyleElement isBorder>{game.detailedText}</RichTextStyleElement>
                 </div>
             </ModalDialog>
