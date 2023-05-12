@@ -60,7 +60,7 @@ export default function ContactFormJob({ subject }) {
                 />
                 <input type="hidden" name="CV" value={fileUrl} />
                 <div className='widget-styler'>
-                    <Widget clearable={true} onChange={(info) => onChange(info)} publicKey={GATSBY_UPLOAD_CARE_PUBLIC_KEY}></Widget>
+                    <Widget clearable={true} onChange={(info) => onChange(info)} publicKey={process.env.GATSBY_UPLOAD_CARE_PUBLIC_KEY}></Widget>
                 </div>
                 <Button type="submit" disabled={state.submitting}>
                     Send!
