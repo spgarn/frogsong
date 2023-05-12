@@ -1,20 +1,28 @@
 // Make sure to run npm install @formspree/react
 // For more help visit https://formspr.ee/react-help
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import Button from '../Button/Button';
 import './contactForm.css'
 import H1 from '../Texts/H1';
 import H4 from '../Texts/H4';
 import { toast } from 'react-hot-toast';
+import { Widget } from "@uploadcare/react-widget";
+
 
 export default function ContactFormJob({ subject }) {
     const [state, handleSubmit] = useForm("mayzvpqr");
+    const [fileUrl, setFileUrl] = useState('')
 
     useEffect(() => {
         if (state.succeeded) toast.success('Message successfully sent!');
         if (!!state.errors.length) toast.success('Something went wrong. Try again.');
     }, [state.succeeded, state.errors.length])
+
+    const onChange = (info) => {
+        setFileUrl(info.cdnUrl)
+    }
+
 
     return (
         <>
@@ -50,6 +58,10 @@ export default function ContactFormJob({ subject }) {
                     field="message"
                     errors={state.errors}
                 />
+                <input type="hidden" name="CV" value={fileUrl} />
+                <div className='widget-styler'>
+                    <Widget clearable={true} onChange={(info) => onChange(info)} publicKey={process.env.UPLOAD_CARE_PUBLIC_KEY}></Widget>
+                </div>
                 <Button type="submit" disabled={state.submitting}>
                     Send!
                 </Button>

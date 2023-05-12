@@ -15,7 +15,7 @@ const ModalDialog = ({ isOpen, onRequestClose, children }) => {
             onRequestClose={onRequestClose}
             isOpen={isOpen}
         >
-            <span onClick={onRequestClose} className='modal-cross-close'>+</span>
+            <span onClick={onRequestClose} tabIndex={0} role="button" onKeyDown={onRequestClose} className='modal-cross-close'>+</span>
             {children}
             <div className='modal-button'>
                 <Button onClick={onRequestClose}>Close</Button>

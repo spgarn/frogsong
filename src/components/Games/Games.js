@@ -4,7 +4,6 @@ import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import H2 from '../Texts/H2'
 import H1 from '../Texts/H1'
 import { Link } from 'gatsby'
-import Loader from '../Loader/Loader'
 import { useQuery } from '@tanstack/react-query'
 
 

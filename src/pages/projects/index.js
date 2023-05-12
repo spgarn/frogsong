@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchBlogPostsLandingPage, fetchProjectsLandingPage } from '../../utils/contentfulConnector'
+import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
 import GameCard from '../../components/Games/GameCard'
 import './projectPage.css'
 import PageHeader from '../../components/PageHeader/PageHeader'

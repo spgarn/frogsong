@@ -4,8 +4,6 @@ import React, { useEffect } from 'react';
 import Button from '../Button/Button';
 import { useForm, ValidationError } from '@formspree/react';
 import './contactForm.css'
-import H1 from '../Texts/H1';
-import H4 from '../Texts/H4';
 import { toast } from 'react-hot-toast';
 import PageHeader from '../PageHeader/PageHeader';
 

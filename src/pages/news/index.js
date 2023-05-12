@@ -1,7 +1,6 @@
 import React from 'react'
 import { fetchBlogPosts } from '../../utils/contentfulConnector'
 import Loader from '../../components/Loader/Loader'
-import PostCard from '../../components/Posts/PostCard'
 import './postPage.css'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import { useQuery } from '@tanstack/react-query';
