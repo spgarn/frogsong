@@ -23,6 +23,8 @@ export default function ContactFormJob({ subject }) {
         setFileUrl(info.cdnUrl)
     }
 
+    const UPLOAD_CARE_PUBLIC_KEY = process.env.UPLOAD_CARE_PUBLIC_KEY
+
 
     return (
         <>
@@ -60,7 +62,7 @@ export default function ContactFormJob({ subject }) {
                 />
                 <input type="hidden" name="CV" value={fileUrl} />
                 <div className='widget-styler'>
-                    <Widget clearable={true} onChange={(info) => onChange(info)} publicKey={process.env.UPLOAD_CARE_PUBLIC_KEY}></Widget>
+                    <Widget clearable={true} onChange={(info) => onChange(info)} publicKey={UPLOAD_CARE_PUBLIC_KEY}></Widget>
                 </div>
                 <Button type="submit" disabled={state.submitting}>
                     Send!
