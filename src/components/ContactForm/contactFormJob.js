@@ -23,7 +23,7 @@ export default function ContactFormJob({ subject }) {
         setFileUrl(info.cdnUrl)
     }
 
-    const UPLOAD_CARE_PUBLIC_KEY = process.env.UPLOAD_CARE_PUBLIC_KEY
+    const UPLOAD_CARE_PUBLIC_KEY = process.env.GATSBY_UPLOAD_CARE_PUBLIC_KEY
 
     return (
         <>
