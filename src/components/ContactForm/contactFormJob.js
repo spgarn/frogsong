@@ -25,7 +25,6 @@ export default function ContactFormJob({ subject }) {
 
     const UPLOAD_CARE_PUBLIC_KEY = process.env.UPLOAD_CARE_PUBLIC_KEY
 
-    console.log(UPLOAD_CARE_PUBLIC_KEY)
     return (
         <>
             <form className='contact-form' onSubmit={handleSubmit}>
