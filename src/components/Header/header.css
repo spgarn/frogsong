@@ -2,14 +2,19 @@
 .header{
     width:100%;
     height:60px;
-    background: rgba(1,1,1,0.4);
     position: fixed;
+    background: transparent;
     top:0;
     left:0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 99;
+    transition: 0.3s all;
+}
+
+.header-background{
+    background: rgba(1,1,1,0.4);;
 }
 
 .logo{

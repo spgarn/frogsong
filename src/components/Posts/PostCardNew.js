@@ -10,7 +10,6 @@ const PostCardNew = ({ post, to, createdAt }) => {
 
     return (
         <Link to={to} key={post.id} className='post-card-new'>
-            {/* <img style={{ gridArea: 'image', objectFit: 'cover', width: '100%', alignSelf: 'center', borderRadius: '8px' }} src={`${post.url.fields.file.url}?w=400&h=240&fit=fill&f=center`}></img> */}
             <H3 style={{ gridArea: 'title' }}>{post.title}</H3>
             <H4 style={{ gridArea: 'description' }}>{post.shortText}</H4>
             <div className='post-card-author' style={{ gridArea: 'author' }}>

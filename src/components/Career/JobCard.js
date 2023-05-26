@@ -18,6 +18,8 @@ export const JobCard = ({ job, setSubject }) => {
     return (
         <>
 
+       
+
             <div role='presentation' onClick={() => setSubject(job.position)} onKeyDown={() => setSubject(job.position)} className='job-card'>
                 <img className='profile-image' src={`${job.image.fields.file.url}?w=400&h=400&fit=fill&f=center`} alt={job.image.fields.file.fileName} />
                 <H2>{job.position}</H2>
