@@ -1,6 +1,14 @@
 .logo-text{
     font-size: 24px;
-   
+}
+
+.dark-text{
+    color:#25281E;
+    text-shadow: none;
+}
+
+.no-text-shadow{
+    text-shadow: none;
 }
 
 @media screen and (max-width: 600px){
