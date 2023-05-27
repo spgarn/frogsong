@@ -43,7 +43,6 @@
     text-overflow: ellipsis;
     white-space:break-spaces;
     overflow: hidden;
-    box-shadow: 0px 1px 3px 1px white;
 }
 
 .post-card{
