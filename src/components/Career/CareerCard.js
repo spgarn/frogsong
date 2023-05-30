@@ -12,8 +12,7 @@ export const CareerCard = ({ employee }) => {
                 <img className='profile-image' src={`${employee.profile.fields.file.url}?w=400&h=400&fit=fill&f=center`} alt={employee.profile.fields.file.fileName} />
                 <H2>{employee.name}</H2>
                 <H3>{employee.role}</H3>
-
-                {!!employee.social &&
+                {!!employee.socials &&
                     <ul className='employee-socials'>
                         {employee.socials.map(url => {
                             const social = getSocialsIcon(url)

@@ -33,7 +33,7 @@
 
 .profile-image{
     border-radius: 50%;
-    border:2px solid rgb(163, 163, 163);
+    border:25px solid var(--secondary);
     width: 200px;
     height: 200px;
     object-fit: cover;
@@ -56,6 +56,7 @@
     padding:0;
     margin:0;
     font-size: 24px;
+    list-style-type: none
 }
 
 .career-card{
@@ -73,7 +74,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300px;
     padding:24px 12px;
     gap:8px;
     background-color: var(--primary);
