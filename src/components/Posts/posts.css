@@ -1,8 +1,7 @@
 .post-list{
-    display: flex;
-    flex-direction: column;
-    grid-auto-columns: 1fr;
-    row-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    gap: 12px;
     padding: 12px 12px;
     position: relative;
 }
@@ -18,7 +17,7 @@
     ;
 }
 
-.post-card-new{
+.post-card{
     border-radius: 12px;
     display: grid;
     height: 120px;
@@ -45,22 +44,6 @@
     overflow: hidden;
 }
 
-.post-card{
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--primary);
-    height: 120px;
-    cursor: pointer;
-    padding:12px 24px;
-    padding-right: 48px;
-    position: relative;
-    text-overflow: ellipsis;
-    white-space:break-spaces;
-    overflow: hidden;
-    box-shadow: 0px 1px 3px 1px white;
-}
-
 .right-arrow{
     position: absolute;
     right:24px;
@@ -78,34 +61,13 @@
 }
 
 .post-area-bottom-text{
-    position: absolute;
-    bottom:-42px;
-    left:50%;
     text-align: center;
-    transform: translate(-50%);
     text-decoration:underline;
     width: 100%;
 }
 
-/* @media screen and (max-width: 850px){
-    .post-card-new{
-        grid-auto-columns: auto;
-        grid-template-areas: 
-        'title'
-        'description'
-        'author'
-        ;
-    }
     
-    } */
 @media screen and (max-width: 600px){
-    .post-area-bottom-text{
-        text-align: center;
-        position: inherit;
-        left:auto;
-        bottom:auto;
-        transform:none;
-    }
     
     .post-area-top-text{
         text-align: center;

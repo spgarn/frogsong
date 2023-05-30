@@ -4,7 +4,7 @@ import Loader from '../../components/Loader/Loader'
 import './postPage.css'
 import PageHeader from '../../components/PageHeader/PageHeader'
 import { useQuery } from '@tanstack/react-query';
-import PostCardNew from '../../components/Posts/PostCardNew'
+import PostCard from '../../components/Posts/PostCard'
 
 
 const News = () => {
@@ -21,7 +21,7 @@ const News = () => {
     return (
         <>
             <PageHeader title={'News'} description={'This is where you will find all the latest news from Frogsong!'} />
-            <div style={{ columnGap: '12px', marginTop: '50px' }} className='page-post-list'>{posts.items.map(post => <PostCardNew key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></PostCardNew>)}</div>
+            <div style={{ columnGap: '12px', marginTop: '50px' }} className='page-post-list'>{posts.items.map(post => <PostCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></PostCard>)}</div>
         </>
     )
 }

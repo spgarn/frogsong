@@ -14,11 +14,15 @@
 .blog-post-contenxt{
     padding:32px;
     border-radius: 32px;
-    overflow-y: scroll;
+    overflow: auto;
     border:1px solid gray;
     box-shadow: 0px 1px 3px 1px white;
     background-color: var(--secondary);
     margin-top: 24px;
+}
+
+.blog-post-contenxt hr{
+    width: 99%;
 }
 
 @media screen and (max-width:600px) {

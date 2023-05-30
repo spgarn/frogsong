@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 
 const Projects = () => {
     const { data: projects, isLoading } = useQuery(['projcets'], async () => {
-        return await fetchProjectsLandingPage();
+        return await fetchProjectsLandingPage(6);
     });
 
     if (isLoading) return <Loader />
