@@ -31,6 +31,12 @@
 }
 
 
+.socials-header{
+    display: flex;
+    flex-direction: row;
+    gap:12px
+}
+
 
 @media screen and (max-width:600px) {
     .logo{
@@ -39,5 +45,19 @@
     .links{
         gap:6px;
         font-size: 14px;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .logo{
+        padding:0px
+    }
+    .links{
+        gap:6px;
+        font-size: 14px;
+    }
+
+    .socials-header{
+        display: none;
     }
 }

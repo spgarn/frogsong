@@ -9,16 +9,20 @@ import { fetchHeroDetails } from "../utils/contentfulConnector"
 import Career from "../components/Career/CareerSection"
 import { useQuery } from "@tanstack/react-query"
 import SocialMedia from "../components/SocialMedia/SocialMedia"
+import { getLimitFromWindowWidth } from "../utils/getLimitFromWindowWidth"
 
 export default function Home() {
     const { data: heroData, isLoading } = useQuery(['heroData'], async () => {
         return await fetchHeroDetails();
     });
 
+    const windowSize = React.useRef([window.innerWidth, window.innerHeight]);
+    const loadDataLimit = getLimitFromWindowWidth(windowSize.current[0])
+
 
     if (isLoading) return <Loader />
 
-
+console.log(loadDataLimit)
 
     return (
         <>
@@ -28,8 +32,8 @@ export default function Home() {
             </div>
             <div className="content-grid">
                 <Hero heroData={heroData.items[0]} style={{ gridArea: "hero" }}></Hero>
-                <Games style={{ gridArea: "games" }}></Games>
-                <Posts style={{ gridArea: "posts" }}></Posts>
+                <Games loadDataLimit={loadDataLimit?.project} style={{ gridArea: "games" }}></Games>
+                <Posts loadDataLimit={loadDataLimit?.news} style={{ gridArea: "posts" }}></Posts>
             </div>
             <Career />
             <SocialMedia />

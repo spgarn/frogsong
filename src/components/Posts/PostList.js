@@ -7,10 +7,10 @@ import { Link } from 'gatsby'
 import { useQuery } from '@tanstack/react-query'
 import PostCard from './PostCard'
 
-const PostList = ({ ...rest }) => {
+const PostList = ({ loadDataLimit,...rest }) => {
 
     const { data: posts, isLoading } = useQuery(['landingBlogPosts'], async () => {
-        return await fetchBlogPostsLandingPage();
+        return await fetchBlogPostsLandingPage(loadDataLimit);
     });
 
     if (isLoading) return

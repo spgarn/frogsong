@@ -7,22 +7,25 @@ import { Link } from 'gatsby'
 import { useQuery } from '@tanstack/react-query'
 
 
-const Games = ({ ...rest }) => {
-    const limitProjects = 6
+const Games = ({ loadDataLimit,...rest }) => {
     const { data: projects, isLoading } = useQuery(['LandingProjcets'], async () => {
-        return await fetchProjectsLandingPage(limitProjects);
+        return await fetchProjectsLandingPage(loadDataLimit);
     });
 
     if (isLoading) return
 
     return (
-        <div className='game-list' {...rest}>
+        <div {...rest}>
+
+     
+        <div className='game-list' >
             <H1 className='game-area-top-text'>Latest projects!</H1>
             {projects.items.map(project => {
                 return <GameCard key={project.fields.id} game={project.fields} />
             })}
 
-            <Link to={'/projects'}>
+        </div>
+        <Link to={'/projects'}>
                 <H2 className='game-area-bottom-text'>View all projects</H2>
             </Link>
         </div>

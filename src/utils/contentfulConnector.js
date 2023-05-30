@@ -23,7 +23,7 @@ export async function fetchProjectsLandingPage(limit) {
 
     const entries = await client.getEntries({
         content_type: 'projects',
-        limit: limit || 200,
+        limit: limit || 4,
 
     })
 
@@ -34,12 +34,12 @@ export async function fetchProjectsLandingPage(limit) {
     }
 }
 
-export async function fetchBlogPostsLandingPage() {
+export async function fetchBlogPostsLandingPage(limit) {
     const futureDate = removeMinutes(new Date(), 10)
 
     const entries = await client.getEntries({
         content_type: 'blogPosts',
-        limit: 13,
+        limit: limit || 8,
         order: '-sys.createdAt',
         'sys.createdAt[lt]': futureDate,
     })

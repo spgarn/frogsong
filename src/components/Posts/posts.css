@@ -1,6 +1,6 @@
 .post-list{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(350px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
     gap: 12px;
     padding: 12px 12px;
     position: relative;
@@ -20,7 +20,7 @@
 .post-card{
     border-radius: 12px;
     display: grid;
-    height: 120px;
+    height: 140px;
     box-shadow: rgb(124 166 69) 250px 0px 150px 20px inset;
     grid-template-areas: 
     'title'
