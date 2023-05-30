@@ -21,18 +21,13 @@
     border-radius: 12px;
     display: grid;
     height: 120px;
-    /* grid-template-areas: 
-    'image title'
-    'image description'
-    'image author'
-    ; */
+    box-shadow: rgb(124 166 69) 250px 0px 150px 20px inset;
     grid-template-areas: 
     'title'
     'description'
     'author'
     ;
     gap:8px;
-    /* grid-auto-columns: 2fr 6fr; */
     grid-auto-columns: auto;
     background-color: var(--primary);
     cursor: pointer;
