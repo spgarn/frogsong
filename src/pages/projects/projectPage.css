@@ -1,9 +1,10 @@
 .page-game-list{
     display: grid;
     gap:12px;
-    padding: 12px 12px;
+    padding: 24px 12px;
     grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
     position: relative;
+    background-color: var(--secondary);
 }
 
 

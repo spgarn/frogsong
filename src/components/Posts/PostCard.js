@@ -10,8 +10,10 @@ const PostCard = ({ post, to, createdAt }) => {
 
     return (
         <Link to={to} key={post.id} className='post-card'>
-            <H3 className={'dark-text'} style={{ gridArea: 'title' }}>{post.title}</H3>
-            <H4 className={'dark-text'} style={{ gridArea: 'description' }}>{post.shortText}</H4>
+            <div className='card-top-overlay'></div>
+            <H3 className={'dark-text post-card-title'} style={{ gridArea: 'title' }}>{post.title}</H3>
+            <H4 className={'dark-text'} style={{ gridArea: 'description' }}>{post.shortText.length > 95 ?
+            `${post.shortText.substring(0, 95)}...` : post.shortText}</H4>
             <div className='post-card-author' style={{ gridArea: 'author' }}>
                 <img alt="Author" style={{ borderRadius: '50%', width: '50px', gridArea: 'image', alignSelf: 'center' }} src={`${post?.author?.fields?.profile?.fields?.file?.url}?w=200&h=200&fit=fill&f=center`}></img>
                 <H4 style={{ color: 'var(--complimentary)' }}>{post?.author?.fields?.name}</H4>

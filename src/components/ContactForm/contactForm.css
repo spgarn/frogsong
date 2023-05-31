@@ -5,7 +5,6 @@
     align-items: center;
     gap:20px;
     padding:24px 12px;
-    border-bottom: solid var(--primary) 2px;
 }
 
 .short-input{
@@ -46,14 +45,14 @@ padding:12px
     position: absolute;
     left: 50%;
     top:0;
-    margin-left: -43px;
-    margin-top: -43px;
+    margin-left: -59px;
+    margin-top: -59px;
     background-color: var(--complimentary);
-    color: var(--primary);
-    width: 85px;
-    height: 85px;
+    color: white;
+    width: 120px;
+    height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: rotate(45deg);
+    clip-path: polygon(49% 0, 71% 23%, 67% 27%, 74% 26%, 100% 51%, 77% 73%, 71% 70%, 74% 75%, 49% 100%, 24% 77%, 29% 70%, 21% 74%, 0% 50%);
 }
