@@ -15,7 +15,7 @@ import H2 from '../components/Texts/H2';
 
 
 
-const PostDetailView = ({ data }) => {
+const DetailViewPost = ({ data }) => {
 
   const [currentView,setCurrentView] = useState(0)
 
@@ -105,4 +105,4 @@ query postDetail($slug:String){
 
 
 
-export default PostDetailView
+export default DetailViewPost
