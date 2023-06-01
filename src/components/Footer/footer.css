@@ -27,3 +27,7 @@
     background-color: var(--complimentary);
     text-align: center;
 }
+
+.ul-social:hover li a {
+    color:white;
+}

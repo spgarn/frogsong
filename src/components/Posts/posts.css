@@ -37,12 +37,15 @@
     white-space:break-spaces;
     overflow: hidden;
     position: relative;
+    transform: scale(100%);
+    transition: 0.5s all;
 }
 
 .post-card:hover{
     box-shadow: 5px 5px 8px var(--complimentary);
     opacity: initial;
     transform: scale(102%);
+    transition: 0.5s all;
 }
 
 .card-top-overlay{

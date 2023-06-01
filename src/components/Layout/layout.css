@@ -52,6 +52,7 @@ li{
 a{
     color: white;
     text-decoration:none;
+    transition: 0.5s all;
 }
 
 a:hover{
