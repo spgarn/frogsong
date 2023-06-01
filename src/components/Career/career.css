@@ -48,6 +48,7 @@
     grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
     position: relative;
     background-color: var(--secondary);
+    border-radius: 12px;
 }
 
 .employee-socials{

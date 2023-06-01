@@ -5,4 +5,5 @@
     padding: 24px 12px;
     position: relative;
     background-color: var(--secondary);
+    border-radius: 12px;
 }

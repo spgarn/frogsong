@@ -22,7 +22,6 @@ export default function Home() {
 
     if (isLoading) return <Loader />
 
-console.log(loadDataLimit)
 
     return (
         <>

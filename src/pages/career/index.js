@@ -21,13 +21,13 @@ const Career = () => {
 
 
     return (
-        <>
+        <div style={{padding:'0px 12px'}}>
             <PageHeader title={'Life at Frogsong'} description={'Enjoy a colorful life at frogsong! Here we live and work playfully and creatively!'} />
             <H1 style={{ textAlign: 'center' }}>{'<Insert Life at frogsong here>'}</H1>
             <PageHeader title={'Job Openings'} description={'Below you will find our current job openings!'} />
             <JobList setSubject={setSubject} jobs={jobs}></JobList>
             <ContactFormJob subject={subject}></ContactFormJob>
-        </>
+        </div>
     )
 }
 
