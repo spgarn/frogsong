@@ -11,7 +11,7 @@ const PostCard = ({ post, to, createdAt }) => {
     return (
         <Link to={to} key={post.id} className='post-card'>
             <div className='card-top-overlay'></div>
-            <H3 className={'dark-text post-card-title'} style={{ gridArea: 'title' }}>{post.title}</H3>
+            <H3 className={'post-card-title'} style={{ gridArea: 'title', zIndex:100 }}>{post.title}</H3>
             <H4 className={'dark-text'} style={{ gridArea: 'description' }}>{post.shortText.length > 95 ?
             `${post.shortText.substring(0, 95)}...` : post.shortText}</H4>
             <div className='post-card-author' style={{ gridArea: 'author' }}>
