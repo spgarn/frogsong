@@ -11,10 +11,11 @@
     grid-auto-columns: min-content auto;
     grid-auto-rows: min-content;
     column-gap:12px;
+    align-items: center;
     grid-template-areas: 
     'image name'
-    'image date'
     ;
+    align-self: end;
 }
 
 .post-card{
@@ -27,7 +28,7 @@
     'author'
     ;
     gap:8px;
-    grid-auto-columns: auto;
+    grid-auto-rows: min-content auto min-content;
     background-color: white;
     cursor: pointer;
     padding:12px 24px;
@@ -54,12 +55,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: -1;
   background-color: var(--secondary);
-  opacity: 0.4;
-  transform: rotate(-3deg);
+  opacity: 0.6;
+  transform: rotate(-2deg);
   width: 100%;
-  height: 25%;
+  height: 20%;
 }
 
 .right-arrow{

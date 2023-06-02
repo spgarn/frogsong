@@ -39,7 +39,7 @@ export async function fetchBlogPostsLandingPage(limit) {
 
     const entries = await client.getEntries({
         content_type: 'blogPosts',
-        limit: limit || 8,
+        limit: limit || 20,
         order: '-sys.createdAt',
         'sys.createdAt[lt]': futureDate,
     })

@@ -25,7 +25,7 @@ const Games = ({ loadDataLimit,...rest }) => {
             })}
 
         </div>
-        <Link to={'/projects'}>
+        <Link to={'/games'}>
                 <H2 className='game-area-bottom-text'>View all projects</H2>
             </Link>
         </div>

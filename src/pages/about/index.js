@@ -4,7 +4,9 @@ import CareerList from '../../components/Career/CareerList'
 import { fetchTeamMembers } from '../../utils/contentfulConnector';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../components/Loader/Loader';
-import H1 from '../../components/Texts/H1';
+import ContactForm from '../../components/ContactForm/ContactForm';
+import History from '../../components/History/History';
+import './about.css'
 
 const About = () => {
 
@@ -15,11 +17,10 @@ const About = () => {
     if (teamIsLoading) return <Loader />
 
     return (
-        <div style={{minHeight:'85vh',padding:'0px 12px'}}>
-            <PageHeader title={'History'} description={'Frogsong studiso was started a cold and dark night. With all games played and no further ideas what to do. The four friends got the idea of creating the own games!'} />
-            <H1 style={{ textAlign: 'center' }}>{'<Insert history here>'}</H1>
-            <PageHeader title={'Team'} description={'This is where you find all our talented members of Frogsong studios!'} />
+        <div className='about-wrapper'>
             <CareerList employees={teamMembers}></CareerList>
+            <History></History>
+<ContactForm></ContactForm>
         </div>
     )
 }

@@ -6,6 +6,7 @@ import { useForm, ValidationError } from '@formspree/react';
 import './contactForm.css'
 import { toast } from 'react-hot-toast';
 import PageHeader from '../PageHeader/PageHeader';
+import Card from '../Card/Card';
 
 export default function ContactForm() {
     const [state, handleSubmit] = useForm("mayzvpqr");
@@ -16,12 +17,11 @@ export default function ContactForm() {
     }, [state.succeeded, state.errors.length])
 
     return (
-        <div style={{ backgroundColor: 'var(--secondary)', position: 'relative' }}>
+        <Card title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} style={{position: 'relative' }}>
             <div className='contact-icon-container'>
                 <i aria-hidden="true" className='fa fa-pen fa-2x career-icon'></i>
             </div>
             <form className='contact-form' onSubmit={handleSubmit}>
-                <PageHeader title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} />
                 <input
                     id="email"
                     type="email"
@@ -55,6 +55,6 @@ export default function ContactForm() {
                     Send!
                 </Button>
             </form>
-        </div>
+        </Card>
     );
 }

@@ -9,14 +9,14 @@ const Hero = ({ heroData, ...rest }) => {
 
     return (
         <div  {...rest}>
-            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url}?w=600&h=600&fit=fill&f=center)` }} className='hero'>
-                <div className='hero-text-wrapper'>
-                <H1 style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>
-                <H2 style={{ padding: '0px 12px' }}>{heroData.fields.subhead}</H2>
+            <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url})` }} className='hero'>
+                
+               {/*  <H1 style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>
+                <H2 style={{ padding: '0px 12px' }}>{heroData.fields.subhead}</H2> */}
                 <a target='_blank' href={heroData.fields.buttonLink} rel="noreferrer" style={{ padding: '0px 12px' }}>
-                    <Button>Try it out!</Button>
+                    <Button style={{width:'200px',borderRadius:'2px'}}>Try it out now!</Button>
                 </a>
-                </div>
+             
 
             </div>
         </div >

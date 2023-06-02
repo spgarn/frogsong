@@ -11,11 +11,11 @@
 }
 .primary-button:hover{
     box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));
-    transform: scale(1.03);
+    transform: scale(1.10);
     transition: 0.5s all;
 }
 .primary-button:active{
     box-shadow: 0px 4px 8px rgba(darken(dodgerblue, 30%));
-    transform: scale(.98);
+    transform: scale(.97);
     transition: 0.5s all;
 }

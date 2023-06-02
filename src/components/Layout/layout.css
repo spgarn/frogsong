@@ -56,13 +56,13 @@ a{
 }
 
 a:hover{
-    opacity: 0.75;
+
     color:var(--complimentary);
     transition: 0.5s all;
 }
 
 a[aria-current=page]{
-    opacity: 0.75;
+  
     color:var(--complimentary);
     transition: 0.5s all;
 }

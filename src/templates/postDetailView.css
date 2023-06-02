@@ -11,12 +11,7 @@
     gap:12px;
 }
 
-.other-news-cards{
-    display: grid;
-    grid-template-columns:30px repeat(3,350px) 30px;
-    justify-content: center;
-    gap:12px
-}
+
 
 .blog-post-contenxt{
     padding:32px;
@@ -30,18 +25,7 @@
     width: 99%;
 }
 
-.detail-card-arrow{
-    color: white;
-    align-self: center;
-    cursor: pointer;
-    transform: scale(100%);
-    transition: all 0.5s;
-}
 
-.detail-card-arrow:hover{
-    transform: scale(125%);
-    transition: all 0.5s;
-}
 
 @media screen and (max-width:600px) {
     .blog-post-contenxt{
@@ -54,15 +38,3 @@
    
 }
 
-@media screen and (max-width:1088px) {
-.other-news-cards{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap:12px;
-    padding:0px 12px;
-}
-.detail-card-arrow{
-    display: none;
-}
-}
