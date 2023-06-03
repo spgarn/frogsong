@@ -4,9 +4,9 @@ import PageHeader from '../PageHeader/PageHeader'
 
 const Card = ({children,className,title,description,...rest}) => {
   return (
-    <div style={{marginTop:'100px'}}>
+    <div {...rest} className='card-wrapper'>
       <PageHeader title={title} description={description}></PageHeader>
-    <div {...rest} className={`card ${className}`}>{children}</div>
+    <div  className={`card ${className}`}>{children}</div>
     </div>
   )
 }

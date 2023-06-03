@@ -7,7 +7,7 @@ import { useQuery } from '@tanstack/react-query'
 import Card from '../../components/Card/Card'
 
 
-const Games = () => {
+const Portfolio = () => {
     const { data: games, isLoading } = useQuery(['projcets'], async () => {
         return await fetchProjectsLandingPage(6);
     });
@@ -20,4 +20,4 @@ const Games = () => {
     )
 }
 
-export default Games
+export default Portfolio

@@ -25,9 +25,10 @@
 
 .dropdown {
     padding: 2px 0;
+    margin: 0;
     height: 0; 
     overflow: hidden;
-    transition: height ease 0.2s;
+    transition: height ease-in-out 0.4s;
     visibility: hidden;
     position: absolute;
     list-style-type: none;
@@ -47,6 +48,7 @@
     display: flex;
     gap:24px;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .links li{
