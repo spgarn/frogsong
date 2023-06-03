@@ -26,8 +26,12 @@
         gap:12px;
         padding:0px 12px;
     }
-    .detail-card-arrow{
-        display: none;
+    .card-slider-arrow{
+       transform: rotate(90deg);
+    }
+    .card-slider-arrow:hover{
+        transform: rotate(90deg);
+        transition: all 0.5s;
     }
     }
 
