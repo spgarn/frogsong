@@ -1,9 +1,18 @@
 .page-post-list{
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
-    row-gap: 12px;
+    gap: 12px;
     padding: 24px 12px;
     position: relative;
     background-color: var(--secondary);
     border-radius: 12px;
 }
+
+.news-wrapper{
+    display: flex;
+    min-height: 85vh;
+    padding:0px 12px;
+    flex-direction: column;
+    gap:25px;
+    align-items: center;
+    }

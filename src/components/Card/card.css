@@ -2,4 +2,12 @@
     background-color: var(--secondary);
     border-radius: 12px;
     padding: 24px 12px;
+    width: clamp(300px, 98vw, 1400px);
+    align-self: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px){
+    .card{width: 100%;}
 }

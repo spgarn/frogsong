@@ -17,7 +17,7 @@ export default function ContactForm() {
     }, [state.succeeded, state.errors.length])
 
     return (
-        <Card title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} style={{position: 'relative' }}>
+        <Card title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} style={{position: 'relative',marginTop:'60px',paddingTop:'50px' }}>
             <div className='contact-icon-container'>
                 <i aria-hidden="true" className='fa fa-pen fa-2x career-icon'></i>
             </div>

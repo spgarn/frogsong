@@ -6,6 +6,7 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import { useQuery } from '@tanstack/react-query';
 import NewsCard from '../../components/News/NewsCard'
 import SocialMedia from '../../components/SocialMedia/SocialMedia'
+import Card from '../../components/Card/Card'
 
 
 const News = () => {
@@ -20,10 +21,13 @@ const News = () => {
 
     if (isLoading) return <Loader />
     return (
-        <div style={{minHeight:'85vh',padding:'0px 12px'}}>
-            <PageHeader title={'News'} description={'This is where you will find all the latest news from Frogsong!'} />
-            <div style={{ columnGap: '12px', marginTop: '50px' }} className='page-post-list'>{posts.items.map(post => <NewsCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></NewsCard>)}</div>
+        <div className='news-wrapper'>
+        <Card title={'News'} description={'This is where you will find all the latest news from Frogsong!'}>
+            <div className='page-post-list'>{posts.items.map(post => <NewsCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></NewsCard>)}</div>
+        </Card>
+        <Card title={'Socials'} description={'Be sure to keep updated!'} style={{marginTop:'50px',paddingTop:'50px'}}>
             <SocialMedia />
+        </Card>
         </div>
     )
 }

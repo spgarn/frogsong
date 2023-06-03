@@ -23,12 +23,39 @@
     align-items: center;
 }
 
+.dropdown {
+    padding: 2px 0;
+    height: 0; 
+    overflow: hidden;
+    transition: height ease 0.2s;
+    visibility: hidden;
+    position: absolute;
+    list-style-type: none;
+    left: 0;
+    font-size: 14px;
+    min-width: 100px;
+  }
+
+
+  a:hover .dropdown {
+    height: 135px;
+    visibility: visible;
+  }
+
 .links{
     padding:0 32px 0 0px;
     display: flex;
     gap:24px;
     align-items: center;
 }
+
+.links li{
+        transition: 0.2s;
+        transition-delay: calc(60ms * var(--delay));
+        padding: 4px 0px;
+}
+
+
 
 
 .socials-header{
@@ -60,4 +87,8 @@
     .socials-header{
         display: none;
     }
+    a:focus-within .dropdown {
+        height: 135px;
+        visibility: visible;
+      }
 }

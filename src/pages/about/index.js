@@ -7,6 +7,7 @@ import Loader from '../../components/Loader/Loader';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import History from '../../components/History/History';
 import './about.css'
+import LifeAt from '../../components/LifeAt/LifeAt';
 
 const About = () => {
 
@@ -19,8 +20,9 @@ const About = () => {
     return (
         <div className='about-wrapper'>
             <CareerList employees={teamMembers}></CareerList>
-            <History></History>
-<ContactForm></ContactForm>
+            <History/>
+            <LifeAt/>
+            <ContactForm/>
         </div>
     )
 }

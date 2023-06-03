@@ -8,6 +8,14 @@
     border-radius: 12px;
 }
 
+.games-wrapper{
+    display: flex;
+    min-height: 85vh;
+    padding:0px 12px;
+    flex-direction: column;
+    gap:25px;
+    align-items: center;
+    }
 
 
 @media screen and (max-width: 600px){

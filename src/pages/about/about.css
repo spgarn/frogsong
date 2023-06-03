@@ -4,4 +4,5 @@ min-height: 85vh;
 padding:0px 12px;
 flex-direction: column;
 gap:25px;
+align-items: center;
 }
