@@ -1,0 +1,16 @@
+.icon-container{
+    position: absolute;
+    left: 50%;
+    top:0;
+    margin-left: -40px;
+    margin-top: -40px;
+    background-color: var(--complimentary);
+    color: white;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(49% 0, 71% 23%, 67% 27%, 74% 26%, 100% 51%, 77% 73%, 71% 70%, 74% 75%, 49% 100%, 24% 77%, 29% 70%, 21% 74%, 0% 50%);
+}
+

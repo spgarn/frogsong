@@ -1,8 +1,9 @@
 import React from 'react'
+import Card from '../../components/Card/Card'
 
 const Press = () => {
   return (
-    <div>Press</div>
+    <Card title={'Press'} description={'Everything you need to have about our games'}></Card>
   )
 }
 

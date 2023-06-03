@@ -41,18 +41,3 @@ padding:12px
     transform: scale(1.03);
 }
 
-.contact-icon-container{
-    position: absolute;
-    left: 50%;
-    top:0;
-    margin-left: -59px;
-    margin-top: -59px;
-    background-color: var(--complimentary);
-    color: white;
-    width: 120px;
-    height: 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: polygon(49% 0, 71% 23%, 67% 27%, 74% 26%, 100% 51%, 77% 73%, 71% 70%, 74% 75%, 49% 100%, 24% 77%, 29% 70%, 21% 74%, 0% 50%);
-}

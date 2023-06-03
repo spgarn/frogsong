@@ -1,14 +1,15 @@
-.page-game-list{
+.own-ip-game-list{
     display: grid;
     gap:12px;
     padding: 50px 12px 24px 12px !important;
     grid-template-columns: repeat(auto-fit,minmax(280px,420px));
+    position: relative;
     background-color: var(--secondary);
     border-radius: 12px;
     justify-content: center;
 }
 
-.games-wrapper{
+.own-ip-wrapper{
     display: flex;
     min-height: 85vh;
     padding:0px 12px;
@@ -19,7 +20,7 @@
 
 
 @media screen and (max-width: 600px){
-.page-game-list{ 
+.own-ip-game-list{ 
     grid-template-columns:1fr;
 }
 }

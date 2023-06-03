@@ -44,8 +44,10 @@
 .career-list{
     display: grid;
     gap:12px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(300px,420px));
     position: relative;
+    justify-content: center;
+    padding:24px;
 }
 
 .employee-socials{
@@ -74,6 +76,6 @@
     align-items: center;
     padding:24px 12px;
     gap:8px;
-    background-color: var(--secondary);
+    background-color: var(--complimentary);
     cursor: pointer;
 }

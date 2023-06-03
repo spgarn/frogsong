@@ -19,14 +19,14 @@ export async function fetchHeroDetails() {
     }
 }
 
-export async function fetchProjectsLandingPage(limit) {
+export async function fetchPortfolio(limit,isOwnIp) {
 
     const entries = await client.getEntries({
         content_type: 'projects',
-        limit: limit || 4,
-
+        limit: limit || 200,
+        'fields.isOwnIp':isOwnIp || false
     })
-
+console.log(entries)
     if (entries.items) {
         return {
             items: entries.items

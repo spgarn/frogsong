@@ -27,8 +27,6 @@ export default function ContactFormJob({ subject }) {
     return (
         <>
             <form className='contact-form' onSubmit={handleSubmit}>
-                <H1>Application</H1>
-                <H4>Click on the job opening that interests you above and then enter your email and message!</H4>
                 <input
                     id="email"
                     type="email"

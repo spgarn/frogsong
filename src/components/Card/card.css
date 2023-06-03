@@ -1,7 +1,7 @@
 .card{
     background-color: var(--secondary);
     border-radius: 12px;
-    padding: 24px 12px;
+    padding: 32px 12px;
     width: clamp(300px, 98vw, 1400px);
     align-self: center;
     position: relative;

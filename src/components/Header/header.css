@@ -37,8 +37,12 @@
     min-width: 100px;
   }
 
+  #non-link{
+    color:white
+  }
 
-  a:hover .dropdown {
+
+  #non-link:hover .dropdown {
     height: 135px;
     visibility: visible;
   }
@@ -89,7 +93,7 @@
     .socials-header{
         display: none;
     }
-    a:focus-within .dropdown {
+    #non-link:focus-within .dropdown {
         height: 135px;
         visibility: visible;
       }

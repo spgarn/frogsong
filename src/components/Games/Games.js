@@ -1,6 +1,6 @@
 import React from 'react'
 import GameCard from './GameCard'
-import { fetchProjectsLandingPage } from '../../utils/contentfulConnector'
+import { fetchPortfolio } from '../../utils/contentfulConnector'
 import H2 from '../Texts/H2'
 import H1 from '../Texts/H1'
 import { Link } from 'gatsby'
@@ -9,7 +9,7 @@ import { useQuery } from '@tanstack/react-query'
 
 const Games = ({ loadDataLimit,...rest }) => {
     const { data: projects, isLoading } = useQuery(['LandingProjcets'], async () => {
-        return await fetchProjectsLandingPage(loadDataLimit);
+        return await fetchPortfolio(loadDataLimit);
     });
 
     if (isLoading) return

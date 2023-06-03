@@ -6,7 +6,8 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 import { fetchJobOpenings } from '../../utils/contentfulConnector'
 import JobList from '../../components/Career/JobList'
 import { useQuery } from '@tanstack/react-query'
-import H1 from '../../components/Texts/H1'
+import Card from '../../components/Card/Card'
+import Icon from '../../components/Icon/Icon'
 
 const Career = () => {
 
@@ -21,13 +22,17 @@ const Career = () => {
 
 
     return (
-        <div style={{padding:'0px 12px'}}>
-            <PageHeader title={'Life at Frogsong'} description={'Enjoy a colorful life at frogsong! Here we live and work playfully and creatively!'} />
-            <H1 style={{ textAlign: 'center' }}>{'<Insert Life at frogsong here>'}</H1>
-            <PageHeader title={'Job Openings'} description={'Below you will find our current job openings!'} />
-            <JobList setSubject={setSubject} jobs={jobs}></JobList>
-            <ContactFormJob subject={subject}></ContactFormJob>
-        </div>
+        <>
+    
+        <Card title={'Job Openings'} description={'Below you will find our current job openings!'} style={{minHeight:'0',gap:'40px'}}>
+                <Icon classname={'fa fa-search fa-2x'}></Icon>
+                <JobList setSubject={setSubject} jobs={jobs}></JobList>
+        </Card>
+        <Card title={'Apply here!'} description={'Click on the job opening that interests you above, fill in your email and message. Be sure to upload your CV!'} style={{gap:'40px'}}>
+                <Icon classname={'fa fa-envelope fa-2x'}></Icon>
+                <ContactFormJob subject={subject}></ContactFormJob>
+         </Card>
+         </>
     )
 }
 
