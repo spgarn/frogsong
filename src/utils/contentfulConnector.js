@@ -70,7 +70,6 @@ export async function fetchThemeDetails() {
 
     const entry = await client.getEntry("5mar2WJMsNJ9YhjYl6IY8a")
 
-
     if (entry) return entry
 
 }
@@ -102,6 +101,22 @@ export async function fetchJobOpenings() {
             items: entries.items
         }
     }
+
+}
+
+export async function fetchHistory() {
+
+    const entry = await client.getEntry("60YMiPOW4k5ssHOkAYbKZB")
+
+    if (entry) return entry
+
+}
+
+export async function fetchLifeAt() {
+
+    const entry = await client.getEntry("20eFCdjDL1fcy8fU0k8Ayl")
+
+    if (entry) return entry
 
 }
 

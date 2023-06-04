@@ -24,17 +24,18 @@
 }
 
 .dropdown {
-    padding: 2px 0;
+    padding: 0 0;
     margin: 0;
-    height: 0; 
+    max-height: 0; 
     overflow: hidden;
-    transition: height ease-in-out 0.4s;
+    transition: all 1s;
     visibility: hidden;
     position: absolute;
     list-style-type: none;
     left: 0;
     font-size: 14px;
     min-width: 100px;
+    border-radius: 8px;
   }
 
   #non-link{
@@ -43,8 +44,9 @@
 
 
   #non-link:hover .dropdown {
-    height: 135px;
+    max-height:200px;
     visibility: visible;
+    transition: all 1s;
   }
 
 .links{
@@ -56,9 +58,9 @@
 }
 
 .links li{
-        transition: 0.2s;
-        transition-delay: calc(60ms * var(--delay));
-        padding: 4px 0px;
+        transition:all 0.3s ease-in-out;
+        padding: 8px 4px;
+        background-color: rgba(1,1,1,0.4);;
 }
 
 
