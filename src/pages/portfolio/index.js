@@ -13,7 +13,7 @@ const Portfolio = () => {
         return await fetchPortfolio();
     });
 
-    if (isLoading || games) return <Loader />
+    if (isLoading || !games) return <Loader />
     return (
 <>
             <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='page-game-list' style={{gap:'40px'}} >

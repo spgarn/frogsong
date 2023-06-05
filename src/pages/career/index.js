@@ -18,7 +18,7 @@ const Career = () => {
 
     const [subject, setSubject] = useState('Career: General interest');
 
-    if (isLoading || jobs) return <Loader />
+    if (isLoading || !jobs) return <Loader />
 
 
     return (
