@@ -12,7 +12,7 @@ const Originalips = () => {
       return await fetchPortfolio(200,true);
   });
 
-  if (isLoading) return <Loader />
+  if (isLoading || games) return <Loader />
   return (
           <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='own-ip-game-list' style={{gap:'40px'}}>
                 <Icon className={'fa fa-gamepad fa-2x icon-container'}/>

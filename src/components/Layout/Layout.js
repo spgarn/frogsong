@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         return await fetchThemeDetails();
     });
 
-    if (isLoading) return <Loader />
+    if (isLoading || !theme) return <Loader />
 
     setTheme(theme)
 

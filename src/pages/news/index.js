@@ -19,7 +19,7 @@ const News = () => {
 
 
 
-    if (isLoading) return <Loader />
+    if (isLoading || posts) return <Loader />
     return (
         <div className='news-wrapper'>
         <Card title={'News'} description={'This is where you will find all the latest news from Frogsong!'} style={{minHeight:'0px',gap:'40px'}}>
