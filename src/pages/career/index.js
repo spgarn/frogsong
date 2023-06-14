@@ -2,7 +2,6 @@
 import Loader from '../../components/Loader/Loader'
 import ContactFormJob from '../../components/ContactForm/contactFormJob'
 import React, { useState } from 'react'
-import PageHeader from '../../components/PageHeader/PageHeader'
 import { fetchJobOpenings } from '../../utils/contentfulConnector'
 import JobList from '../../components/Career/JobList'
 import { useQuery } from '@tanstack/react-query'

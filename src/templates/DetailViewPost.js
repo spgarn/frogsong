@@ -3,9 +3,9 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
 import './postDetailView.css'
-import PageHeader from '../components/PageHeader/PageHeader';
 import H2 from '../components/Texts/H2';
 import CardSlider from '../components/CardSlider/CardSlider';
+import Card from '../components/Card/Card';
 
 
 
@@ -38,10 +38,9 @@ const DetailViewPost = ({ data }) => {
     return (
       
         <>
-            <div className='post-grid-container'>
-                <PageHeader style={{ gridArea: 'header' }} title={data.contentfulNews.title}></PageHeader>
+            <Card style={{minHeight:'auto',marginBottom:'12px'}} title={data.contentfulNews.title}>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
-            </div>
+            </Card>
 
             <H2 style={{textAlign:'center',paddingBottom:'24px'}}>Explore the latest news!</H2>
            

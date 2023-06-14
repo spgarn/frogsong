@@ -16,7 +16,7 @@ const Originalips = () => {
   return (
           <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='own-ip-game-list' style={{gap:'40px'}}>
                 <Icon className={'fa fa-gamepad fa-2x icon-container'}/>
-            {games.items.map(project => <GameCard key={project.fields.id} game={project.fields}></GameCard>)}</Card >
+            {games.items.map(project => <GameCard  to={`/originalips/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}</Card >
   )
 }
 
