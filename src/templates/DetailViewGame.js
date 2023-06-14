@@ -2,9 +2,9 @@ import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
-import './postDetailView.css'
-import H2 from '../components/Texts/H2';
+import './templates.css'
 import Card from '../components/Card/Card';
+import H4 from '../components/Texts/H4';
 
 const DetailViewGame = ({ data }) => {
     const options = {
@@ -23,18 +23,20 @@ const DetailViewGame = ({ data }) => {
         }
     }
 
-
     return (
-      
-        <>
-            <Card style={{minHeight:'auto',marginBottom:'12px'}} title={data.contentfulProjects.title}>
+      <div className='game-detail-content'>
+
+    
+            <Card style={{gridArea:'main'}} className={'small-card-class'} title={data.contentfulProjects.title}>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulProjects.detailedText.raw), options)}</div>
             </Card>
-
-            <H2 style={{textAlign:'center',paddingBottom:'24px'}}>Explore the latest news!</H2>
+            <div className='game-aside'>
+            <img style={{ width: '100%', height: 'auto', borderRadius: '12px' }} src={data.contentfulProjects.url.file.url} alt={data.contentfulProjects.url.file.fileName}/>
+            <H4>{data.contentfulProjects.infoText}</H4>
+           {data.contentfulProjects.steamId && <iframe title={data.contentfulProjects.steamId} src={`https://store.steampowered.com/widget/${data.contentfulProjects.steamId}/`} frameborder="0" width="450" height="190"></iframe>}
            
-            
-        </>
+                </div>        
+            </div>
     )
 }
 
@@ -44,6 +46,8 @@ query gameDetail($slug:String){
       id,
       contentful_id,
       title,
+      infoText,
+      steamId,
       url {
         file {
           url

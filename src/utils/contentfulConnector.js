@@ -26,7 +26,7 @@ export async function fetchPortfolio(limit,isOwnIp) {
         limit: limit || 200,
         'fields.isOwnIp':isOwnIp || false
     })
-console.log(entries)
+
     if (entries.items) {
         return {
             items: entries.items

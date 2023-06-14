@@ -27,9 +27,6 @@
     clip-path: polygon(49% 0, 71% 23%, 67% 27%, 74% 26%, 100% 51%, 77% 73%, 71% 70%, 74% 75%, 49% 100%, 24% 77%, 29% 70%, 21% 74%, 0% 50%);
 }
 
-.career-icon{
-    transform: rotate(315deg);
-}
 
 .profile-image{
     border-radius: 50%;

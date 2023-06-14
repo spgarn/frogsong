@@ -21,7 +21,7 @@ const News = () => {
 
     if (isLoading || !posts) return <Loader />
     return (
-        <div className='news-wrapper'>
+        <>
         <Card title={'News'} description={'This is where you will find all the latest news from Frogsong!'} style={{minHeight:'0px',gap:'40px'}}>
             <Icon classname={'fa fa-newspaper-o fa-2x'}></Icon>
             <div className='page-post-list'>{posts.items.map(post => <NewsCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></NewsCard>)}</div>
@@ -30,7 +30,7 @@ const News = () => {
             <Icon classname={"fa fa-video fa-2x career-icon"}></Icon>
             <SocialMedia />
         </Card>
-        </div>
+        </>
     )
 }
 

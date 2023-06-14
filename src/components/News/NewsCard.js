@@ -7,7 +7,6 @@ import { Link } from 'gatsby'
 
 const NewsCard = ({ post, to, createdAt }) => {
 
-
     return (
         <Link to={to} key={post.id} className='post-card'>
             <div className='card-top-overlay'></div>
@@ -16,7 +15,7 @@ const NewsCard = ({ post, to, createdAt }) => {
             `${post.shortText.substring(0, 115)}...` : post.shortText}</H4>
             <div className='post-card-author' style={{ gridArea: 'author' }}>
                 <img alt="Author" style={{ borderRadius: '50%', width: '50px', gridArea: 'image', alignSelf: 'center' }} src={`${post?.author?.fields?.profile?.fields?.file?.url || post?.author?.profile?.url}?w=200&h=200&fit=fill&f=center`}></img>
-                <H4 style={{ color: 'var(--complimentary)' }}>{post?.author?.fields?.name}</H4>
+                <H4 style={{ color: 'var(--complimentary)' }}>{post?.author?.fields?.name || post?.author?.name}</H4>
                {/*  <H4 style={{ color: 'var(--complimentary)' }}>{dateFormatter(createdAt)}</H4> */}
             </div>
             <i className="fa fa-arrow-right right-arrow" aria-hidden="true"></i>

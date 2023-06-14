@@ -45,7 +45,6 @@ exports.createPages = async ({ graphql, actions }) => {
     `)
 
     game.allContentfulProjects.edges.forEach(edge => {
-      console.log(edge)
       actions.createPage({
           path: edge.node.isOwnIp ? '/originalips/' + edge.node.slug : '/portfolio/' + edge.node.slug,
           component: path.resolve('./src/templates/DetailViewGame.js'),

@@ -8,7 +8,7 @@ const CareerSection = () => {
     return (
         <div className='container'>
             <div className='career-icon-container'>
-                <i aria-hidden="true" className='fa fa-gamepad fa-2x career-icon'></i>
+                <i aria-hidden="true" className='fa fa-gamepad fa-2x'></i>
             </div>
             <PageHeader title={'Looking for job opportunities with Frogsong?'} subTitle={'We might have a number of available positions on our career page'} />
             <Link to="/career">

@@ -2,7 +2,7 @@ import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
-import './postDetailView.css'
+import './templates.css'
 import H2 from '../components/Texts/H2';
 import CardSlider from '../components/CardSlider/CardSlider';
 import Card from '../components/Card/Card';
@@ -34,16 +34,24 @@ const DetailViewPost = ({ data }) => {
     }
     const sortedAllNews = data.allContentfulNews.nodes.sort((a,b)=> new Date(b.createdAt) - new Date(a.createdAt) )
 
+    console.log(data)
 
     return (
       
         <>
-            <Card style={{minHeight:'auto',marginBottom:'12px'}} title={data.contentfulNews.title}>
+        <div className='post-detail-content'>
+            <Card style={{minHeight:'auto',marginBottom:'12px', gridArea:'main'}} title={data.contentfulNews.title}>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
             </Card>
 
             <H2 style={{textAlign:'center',paddingBottom:'24px'}}>Explore the latest news!</H2>
-           
+      
+              <div className='post-aside'>
+              <img alt="Author" style={{ borderRadius: '50%', width: '150px' }} src={`${data.contentfulNews.author.profile.url}?w=200&h=200&fit=fill&f=center`}></img>
+            <div style={{textAlign:'center',display:'flex',gap:'12px',flexDirection:'column'}}><H2>Written by {data.contentfulNews.author.name}</H2><H2>{data.contentfulNews.author.role}</H2></div>
+            </div>
+          </div> 
+  
            <CardSlider posts={sortedAllNews}></CardSlider>
             
         </>
@@ -55,6 +63,13 @@ query postDetail($slug:String){
   contentfulNews(slug:{eq:$slug}) {
     id,
     contentful_id,
+    author{
+      name,
+      role,
+      profile{
+        url
+      }
+    },
     title,
     url {
       file {
