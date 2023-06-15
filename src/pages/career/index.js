@@ -23,7 +23,7 @@ const Career = () => {
     return (
         <>
     
-        <Card title={'Job Openings'} description={'Below you will find our current job openings!'} style={{minHeight:'0',gap:'40px'}}>
+        <Card title={'Job Openings'} description={'Below you will find our current open positions!'} style={{minHeight:'0',gap:'40px'}}>
                 <Icon classname={'fa fa-search fa-2x'}></Icon>
                 <JobList setSubject={setSubject} jobs={jobs}></JobList>
         </Card>

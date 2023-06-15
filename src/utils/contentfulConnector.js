@@ -120,5 +120,14 @@ export async function fetchLifeAt() {
 
 }
 
+export async function fetchContactUs() {
+
+    const entry = await client.getEntry("2qK5kaVjHpcjfo2pxeHUhV")
+
+    if (entry) return entry
+
+}
+
+
 
 

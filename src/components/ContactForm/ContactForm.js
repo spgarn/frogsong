@@ -5,11 +5,10 @@ import Button from '../Button/Button';
 import { useForm, ValidationError } from '@formspree/react';
 import './contactForm.css'
 import { toast } from 'react-hot-toast';
-import PageHeader from '../PageHeader/PageHeader';
 import Card from '../Card/Card';
 import Icon from '../Icon/Icon';
 
-export default function ContactForm() {
+export default function ContactForm({title, description}) {
     const [state, handleSubmit] = useForm("mayzvpqr");
 
     useEffect(() => {
@@ -18,7 +17,7 @@ export default function ContactForm() {
     }, [state.succeeded, state.errors.length])
 
     return (
-        <Card title={'CONTACT US'} description={'"An e-mail a day keeps an empty inbox away!" - Olle"'} style={{gap:'40px'}} >
+        <Card title={title} description={description} style={{gap:'40px'}} >
            <Icon classname={'fa fa-pen fa-2x career-icon'} />
             <form className='contact-form' onSubmit={handleSubmit}>
                 <input
