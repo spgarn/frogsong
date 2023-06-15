@@ -34,7 +34,6 @@
     ;
     grid-auto-columns: 60vw 200px;
     justify-content: center;
-    gap:36px
 }
 
 .post-aside{
@@ -47,7 +46,6 @@
     gap:24px;
     padding:24px;
     align-items: center;
-    align-self: center;
     height: min-content;
     background-color: var(--secondary);
 }

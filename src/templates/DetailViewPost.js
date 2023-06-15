@@ -44,15 +44,18 @@ const DetailViewPost = ({ data }) => {
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
             </Card>
 
+            <div>
             <H2 style={{textAlign:'center',paddingBottom:'24px'}}>Explore the latest news!</H2>
-      
+            <CardSlider posts={sortedAllNews}></CardSlider>
+            </div>
+
               <div className='post-aside'>
               <img alt="Author" style={{ borderRadius: '50%', width: '150px' }} src={`${data.contentfulNews.author.profile.url}?w=200&h=200&fit=fill&f=center`}></img>
             <div style={{textAlign:'center',display:'flex',gap:'12px',flexDirection:'column'}}><H2>Written by {data.contentfulNews.author.name}</H2><H2>{data.contentfulNews.author.role}</H2></div>
             </div>
+            
           </div> 
-  
-           <CardSlider posts={sortedAllNews}></CardSlider>
+         
             
         </>
     )
