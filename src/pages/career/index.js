@@ -2,7 +2,7 @@
 import Loader from '../../components/Loader/Loader'
 import ContactFormJob from '../../components/ContactForm/contactFormJob'
 import React, { useState } from 'react'
-import { fetchJobOpenings } from '../../utils/contentfulConnector'
+import { fetchApplicationFormContentPage, fetchJobContentPage, fetchJobOpenings } from '../../utils/contentfulConnector'
 import JobList from '../../components/Career/JobList'
 import { useQuery } from '@tanstack/react-query'
 import Card from '../../components/Card/Card'
@@ -14,20 +14,31 @@ const Career = () => {
         return await fetchJobOpenings();
     });
 
+    const { data: applicationFormContentPage, isLoading:applicationFormContentPageIsLoading } = useQuery(['applicationFormContentPage'], async () => {
+        return await fetchApplicationFormContentPage();
+    });
+
+    const { data: jobContentPage, isLoading:jobContentPageIsLoading } = useQuery(['jobContentPage'], async () => {
+        return await fetchJobContentPage();
+    });
+
+   
 
     const [subject, setSubject] = useState('Career: General interest');
 
-    if (isLoading || !jobs) return <Loader />
+    console.log(applicationFormContentPage)
+
+    if (isLoading || !jobs || !applicationFormContentPage || applicationFormContentPageIsLoading || !jobContentPage || jobContentPageIsLoading) return <Loader />
 
 
     return (
         <>
     
-        <Card title={'Job Openings'} description={'Below you will find our current open positions!'} style={{minHeight:'0',gap:'40px'}}>
+        <Card title={jobContentPage.fields.title} description={jobContentPage.fields.shortText} style={{minHeight:'0',gap:'40px'}}>
                 <Icon classname={'fa fa-search fa-2x'}></Icon>
                 <JobList setSubject={setSubject} jobs={jobs}></JobList>
         </Card>
-        <Card title={'Apply here!'} description={'Click on the job opening that interests you above, fill in your email and message. Be sure to upload your CV!'} style={{gap:'40px'}}>
+        <Card title={applicationFormContentPage.fields.title} description={applicationFormContentPage.fields.shortText} style={{gap:'40px'}}>
                 <Icon classname={'fa fa-envelope fa-2x'}></Icon>
                 <ContactFormJob subject={subject}></ContactFormJob>
          </Card>

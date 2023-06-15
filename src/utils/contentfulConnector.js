@@ -136,6 +136,21 @@ export async function fetchTeamContentPage() {
 
 }
 
+export async function fetchApplicationFormContentPage() {
+
+    const entry = await client.getEntry("1jzmN0KhPcsdi047aIhg7y")
+
+    if (entry) return entry
+
+}
+
+export async function fetchJobContentPage() {
+
+    const entry = await client.getEntry("256eThunKLxF32v6tWGRAX")
+
+    if (entry) return entry
+
+}
 
 
 
