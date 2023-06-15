@@ -1,7 +1,7 @@
 import React from 'react'
 import CareerList from '../../components/Career/CareerList'
 import { useQuery } from '@tanstack/react-query';
-import { fetchTeamMembers } from '../../utils/contentfulConnector';
+import { fetchTeamContentPage, fetchTeamMembers } from '../../utils/contentfulConnector';
 import Loader from '../../components/Loader/Loader';
 
 const Team = () => {
@@ -9,9 +9,16 @@ const Team = () => {
         return await fetchTeamMembers();
     });
 
-    if (teamIsLoading || !teamMembers) return <Loader />
+    const { data: teamContentPage, isLoading: teamIsLoadingContentPage } = useQuery(['teamContentPage'], async () => {
+      return await fetchTeamContentPage();
+  });
+
+    if (teamIsLoading || !teamMembers || !teamContentPage || teamIsLoadingContentPage) return <Loader />
+
+
+
   return (
-    <CareerList employees={teamMembers}></CareerList>
+    <CareerList employees={teamMembers} title={teamContentPage.fields.title} description={teamContentPage.fields.shortText}></CareerList>
   )
 }
 

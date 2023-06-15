@@ -128,6 +128,16 @@ export async function fetchContactUs() {
 
 }
 
+export async function fetchTeamContentPage() {
+
+    const entry = await client.getEntry("15ZTKEZijAt00UarEvVIDj")
+
+    if (entry) return entry
+
+}
+
+
+
 
 
 
