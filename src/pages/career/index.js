@@ -26,7 +26,6 @@ const Career = () => {
 
     const [subject, setSubject] = useState('Career: General interest');
 
-    console.log(applicationFormContentPage)
 
     if (isLoading || !jobs || !applicationFormContentPage || applicationFormContentPageIsLoading || !jobContentPage || jobContentPageIsLoading) return <Loader />
 
