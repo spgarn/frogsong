@@ -41,7 +41,7 @@
 .career-list{
     display: grid;
     gap:12px;
-    grid-template-columns: repeat(auto-fit,minmax(300px,420px));
+    grid-template-columns: repeat(auto-fit,minmax(300px,380px));
     position: relative;
     justify-content: center;
     padding:24px;

@@ -1,26 +1,22 @@
-.render-rich-text{
-border-top: 1px solid var(--primary);
-margin-top: 12px;
-display: flex;
-flex-direction: column;
-align-items: center;
-align-self: center;
-justify-content: center;
-text-align: center;
+    .render-rich-text{
+    border-top: 1px solid var(--primary);
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
 }
 
 .render-rich-text-no-border{
     margin-top: 12px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     align-self: center;
     justify-content: center;
-    text-align: center;
-    }
+}
 
 .render-rich-text ul{
-align-self: flex-start;
+    align-self: flex-start;
 }
 
 .render-rich-text p:not(:first-child){

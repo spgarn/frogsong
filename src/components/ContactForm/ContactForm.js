@@ -17,7 +17,7 @@ export default function ContactForm({title, description}) {
     }, [state.succeeded, state.errors.length])
 
     return (
-        <Card title={title} description={description} style={{gap:'40px'}} >
+        <Card title={title} description={description} >
            <Icon classname={'fa fa-pen fa-2x career-icon'} />
             <form className='contact-form' onSubmit={handleSubmit}>
                 <input

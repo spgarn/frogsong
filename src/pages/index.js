@@ -31,14 +31,11 @@ export default function Home() {
             <div className="content-grid">
                 <Hero heroData={heroData.items[0]} style={{ gridArea: "hero" }}>
                 </Hero>
-              {/* <Games loadDataLimit={loadDataLimit?.project} style={{ gridArea: "games" }}></Games> */}
               <div style={{ gridArea: "posts" }}>
-                <PageHeader title={'Latest news'}></PageHeader>
+                <PageHeader title={'LATEST NEWS'}></PageHeader>
                 <CardSlider posts={fields} ></CardSlider>
                 </div>
             </div>
-          {/*   <Career />
-            <ContactForm></ContactForm> */}
         </>
     )
 }

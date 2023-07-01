@@ -15,9 +15,9 @@ const LifeAt = () => {
   if(isloading || !data) return <Loader/>
 
   return (
-    <Card title={data?.fields?.title} description={data?.fields?.shortText}  className='history-area' style={{gap:'40px',minHeight:'0px'}}>
+    <Card title={data?.fields?.title} description={data?.fields?.shortText}  className='history-area' style={{minHeight:'0px'}}>
       <Icon classname={'fa fa-hand-peace-o fa-2x'}></Icon>
-      <RichTextStyleElement style={{ textAlign: 'center',padding:'24px' }}>{data.fields.content}</RichTextStyleElement>
+      <RichTextStyleElement style={{ padding:'24px' }}>{data.fields.content}</RichTextStyleElement>
  </Card>
   )
 }

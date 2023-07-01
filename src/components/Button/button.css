@@ -8,6 +8,9 @@
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     border-bottom: 4px solid lighten(gray, 70%);
     transition: 0.5s all;
+    text-transform: uppercase;
+    font-family: Kosugi;
+    font-size: 15px;
 }
 .primary-button:hover{
     box-shadow: 0px 15px 25px -5px rgba(darken(dodgerblue, 40%));

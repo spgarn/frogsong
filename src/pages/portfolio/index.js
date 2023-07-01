@@ -16,7 +16,7 @@ const Portfolio = () => {
     if (isLoading || !games) return <Loader />
     return (
 <>
-            <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='page-game-list' style={{gap:'40px'}} >
+            <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='page-game-list' >
             <Icon className={'fa fa-handshake-o fa-2x icon-container'}></Icon>
             {games.items.map(project => <GameCard  to={`/portfolio/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}
             

@@ -12,8 +12,8 @@ const Hero = ({ heroData, ...rest }) => {
             <div style={{ backgroundImage: `url(${heroData.fields.image.fields.file.url})` }} className='hero'>
 
 
-                {heroData.fields.heading && <H1 style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>}
-                {heroData.fields.subhead && <H2 style={{ padding: '0px 12px' }}>{heroData.fields.subhead}</H2>}
+                {heroData.fields.heading && <H1 className={'no-text-shadow'} style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>}
+                {heroData.fields.subhead && <H2 className={'no-text-shadow'} style={{ padding: '0px 12px',textTransform:'uppercase' }}>{heroData.fields.subhead}</H2>}
                 <a target='_blank' href={heroData.fields.buttonLink} rel="noreferrer" style={{ padding: '0px 12px' }}>
                     <Button style={{width:'200px',borderRadius:'2px'}}>Try it out now!</Button>
                 </a>

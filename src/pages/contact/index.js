@@ -13,7 +13,6 @@ const Contact = () => {
 
 if (isLoading || !contact) return <Loader />
 
-console.log(contact)
 
   return (
     <ContactForm title={contact.fields.title} description={contact.fields.shortText}/>

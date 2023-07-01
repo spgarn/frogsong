@@ -18,9 +18,9 @@ const History = () => {
   if(isloading || !data) return <Loader/>
 
   return (
-    <Card title={data?.fields?.title} description={data?.fields?.shortText} style={{minHeight:'0px',gap:'40px'}}>
+    <Card title={data?.fields?.title} description={data?.fields?.shortText} style={{minHeight:'0px'}}>
       <Icon classname={'fa fa-hourglass-half fa-2x'}></Icon>
-    <RichTextStyleElement  style={{ textAlign: 'center',padding:'24px' }}>{data.fields.content}</RichTextStyleElement>
+    <RichTextStyleElement style={{ textAlign: 'left', padding:'24px' }}>{data.fields.content}</RichTextStyleElement>
  </Card>
   )
 }
