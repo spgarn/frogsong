@@ -21,18 +21,16 @@
 .post-card{
     border-radius: 12px;
     display: grid;
-    height: 140px;
     grid-template-areas: 
+    'image'
     'title'
     'description'
-    'author'
+    'readmore'
     ;
     gap:8px;
-    grid-auto-rows: min-content auto min-content;
+    grid-auto-rows: 40% auto auto min-content;
     background-color: white;
     cursor: pointer;
-    padding:12px 24px;
-    padding-right: 48px;
     position: relative;
     text-overflow: ellipsis;
     white-space:break-spaces;
@@ -64,10 +62,11 @@
 }
 
 .right-arrow{
-    position: absolute;
-    right:24px;
-    top:50%;
-    color:var(--complimentary)
+    color:var(--complimentary);
+    display: flex;
+    gap:8px;
+    justify-self: flex-end;
+    padding:0px 8px 8px 0px;
 }
 
 .post-area-top-text{

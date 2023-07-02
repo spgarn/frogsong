@@ -101,6 +101,11 @@ query postDetail($slug:String){
       slug,
       shortText,
       createdAt,
+      url{
+        file{
+          url
+        }
+      },
       author {
         id,
         name,
