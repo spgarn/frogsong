@@ -1,35 +1,38 @@
 import React from 'react'
 import './footer.css'
 import H3 from '../Texts/H3'
+import Loader from '../Loader/Loader';
+import { useQuery } from '@tanstack/react-query';
+import { fetchFooter } from '../../utils/contentfulConnector';
+import { getSocialsIcon } from '../../utils/getSocialsIcon'
+
 
 const Footer = () => {
-    const links = [
-        { url: 'https://twitter.com/FrogsongStudios', class: 'fab fa-twitter', id: 1 },
-        { url: 'https://store.steampowered.com/search/?developer=Frogsong%20Studios', class: 'fab fa-steam', id: 2 },
-        /* { url: 'https://www.facebook.com/FrogsongStudios/', class: 'fab fa-facebook', id: 3 },
-        { url: 'https://www.linkedin.com/company/frogsong-studios/about/', class: 'fab fa-linkedin-in', id: 4 }, */
-        { url: 'https://discord.gg/eGkg2hR', class: 'fab fa-discord', id: 5 },
-        { url: 'https://www.youtube.com/channel/UCzIvDyGvG8HJEsWY8ZfxATw', class: 'fab fa-youtube', id: 6 },
-        /* { url: 'https://www.twitch.tv/frogsongstudios', class: 'fab fa-twitch', id: 7 }, */
-    ]
+
+    const { data: footerData, isLoading } = useQuery(['footerData'], async () => {
+        return await fetchFooter();
+    });
+
+    if (!footerData) return <Loader />
     return (
         <div className='footer'>
 
 
             <ul className='ul-social'>
-                {links.map(link => {
+                {footerData.fields.socials.map(link => {
+                    const social = getSocialsIcon(link)
                     return (
-                        <li style={{ listStyleType: 'none' }} key={link.id} >
-                            <a target='_blank' href={link.url} rel="noreferrer">
-                                <i className={link.class}></i>
+                        <li style={{ listStyleType: 'none' }} key={social.url} >
+                            <a target='_blank' href={social.url} rel="noreferrer">
+                                <i className={social.icon}></i>
                             </a>
                         </li>
                     )
                 })}
             </ul>
             <div>
-                <H3>Copyright © Frogsong Studios {new Date().getFullYear()}</H3>
-                <H3> Torggatan 2, 211 40 Malmö</H3>
+                <H3>{footerData.fields.address} {new Date().getFullYear()}</H3>
+                <H3>{footerData.fields.copyright}</H3>
             </div>
         </div>
     )

@@ -127,6 +127,13 @@ export async function fetchContactUs() {
     if (entry) return entry
 
 }
+export async function fetchFooter() {
+
+    const entry = await client.getEntry("3nVyz0bS9OQaSeyMAOASXR")
+
+    if (entry) return entry
+
+}
 
 export async function fetchTeamContentPage() {
 
