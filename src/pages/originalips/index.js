@@ -14,7 +14,7 @@ const Originalips = () => {
 
   if (isLoading || !games) return <Loader />
   return (
-          <Card title={'Games'} description={'This is where you will find all the different projects we have been involved with!'} className='own-ip-game-list'>
+          <Card title={'Portfolio'} description={'This is where you will find all the different projects we have been involved with!'} className='own-ip-game-list'>
                 <Icon className={'fa fa-gamepad fa-2x icon-container'}/>
             {games.items.map(project => <GameCard  to={`/originalips/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}</Card >
   )

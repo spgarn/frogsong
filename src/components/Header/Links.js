@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 
 const Links = () => {
-    const links = [{main:'PRESS'}, {main:'NEWS'}, {main:'GAMES',children:['Original IPs','Portfolio']},{main:'CAREER'}, {main:'ABOUT',children:['Team','Studio','Contact']}]
+    const links = [{main:'PRESS'}, {main:'NEWS'}, {main:'PORTFOLIO',children:['Original IPs','Portfolio']},{main:'CAREER'}, {main:'ABOUT',children:['Team','Studio','Contact']}]
     return (
         <>
     

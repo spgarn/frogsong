@@ -28,6 +28,7 @@ const DetailViewGame = ({ data }) => {
 
     
             <Card style={{gridArea:'main'}} className={'small-card-class'} title={data.contentfulProjects.title}>
+              <span className='go-back' onClick={()=>window.history.back()}></span>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulProjects.detailedText.raw), options)}</div>
             </Card>
             <div className='game-aside'>
