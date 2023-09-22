@@ -1,8 +1,8 @@
-import './iframecontainer.css'
 import React from 'react'
+import './ifc.css'
 
-export const IFrameContainer = ({children}) => {
+export const IFrameContainer = ({ children }) => {
     return (
-        <span className="i-frame-container">{children}</span>
+        <span style={{}} className="i-frame-container">{children}</span>
     );
-};
+}; 
