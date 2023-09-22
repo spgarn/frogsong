@@ -1,75 +1,80 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://use.fontawesome.com/releases/v5.15.4/css/all.css');
 
-:root{
-    --primary:#d9f1cd;
-    --secondary:#7CA645;
-    --complimentary:#ffb870;
-    --background:#2E3330;
+:root {
+    --primary: #d9f1cd;
+    --secondary: #7CA645;
+    --complimentary: #ffb870;
+    --background: #2E3330;
 }
 
-body{
+body {
     margin: 0;
     background-color: var(--background);
+    max-width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-h1{
+h1 {
     font-size: 36px;
-    color:white;
-    margin:0;
+    color: white;
+    margin: 0;
     /* text-shadow: 2px 3px black; */
 }
 
-h2{
+h2 {
     font-size: 24px;
-    color:white;
+    color: white;
     /* text-shadow: 2px 3px black; */
-    margin:0;
+    margin: 0;
 }
 
-h3{
+h3 {
     font-size: 18px;
-    color:white;
+    color: white;
     /* text-shadow: 1px 2px black; */
-    margin:0;
+    margin: 0;
 }
 
-h4{
+h4 {
     font-size: 14px;
-    color:white;
+    color: white;
     /* text-shadow: 1px 1px black; */
-    margin:0;
+    margin: 0;
 }
-p{
-    color:white;
-}
-li{
-    list-style-type:inherit;
+
+p {
     color: white;
 }
 
-textarea{
+li {
+    list-style-type: inherit;
+    color: white;
+}
+
+textarea {
     font-family: Kosugi;
 }
 
-input{
+input {
     font-family: Kosugi
 }
 
-a{
+a {
     color: white;
-    text-decoration:none;
+    text-decoration: none;
     transition: 0.5s all;
 }
 
-a:hover{
+a:hover {
 
-    color:var(--complimentary);
+    color: var(--complimentary);
     transition: 0.5s all;
 }
 
-a[aria-current=page]{
-  
-    color:var(--complimentary);
+a[aria-current=page] {
+
+    color: var(--complimentary);
     transition: 0.5s all;
 }

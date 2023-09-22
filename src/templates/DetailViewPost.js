@@ -1,11 +1,13 @@
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
+import { INLINES } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
 import './templates.css'
 import H2 from '../components/Texts/H2';
 import CardSlider from '../components/CardSlider/CardSlider';
 import Card from '../components/Card/Card';
+import { IFrameContainer } from '../components/IframeContainer/IFrameContainer';
 
 
 
@@ -23,6 +25,14 @@ const DetailViewPost = ({ data }) => {
         const asset = data.contentfulNews.contentText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
         return (<img style={{ width: '25%', height: 'auto', borderRadius: '12px' }} src={asset.url} alt={asset.fileName}
         />)
+      },
+      [INLINES.HYPERLINK]: (node) => {
+        if ((node.data.uri).includes("youtube.com/embed")) {
+          return <IFrameContainer><iframe title="Unique Title 002" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IFrameContainer>
+        } else if ((node.data.uri).includes("store.steampowered")) {
+          const widgetUrl = node.data.uri.replace('app', 'widget')
+          return <iframe title={widgetUrl} src={widgetUrl} frameBorder="0" width="100%" height="190"></iframe>
+        }
       }
       // HERE IS CODE TO RENDER LINKS TO OTHER POSTS!
       // [BLOCKS.EMBEDDED_ENTRY]: (node, children) => {
@@ -32,15 +42,15 @@ const DetailViewPost = ({ data }) => {
       // }
     }
   }
-  const sortedAllNews = data.allContentfulNews.nodes.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+  const sortedAllNews = data.allContentfulNews.nodes.sort((a, b) => new Date(b.updatedAt) - new Date(a.updatedAt))
 
 
   return (
 
     <>
+
       <div className='post-detail-content'>
         <Card style={{ minHeight: 'auto', marginBottom: '12px', gridArea: 'main' }} title={data.contentfulNews.title}>
-          <span className='go-back' onClick={() => window.history.back()}></span>
           <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulNews.contentText.raw), options)}</div>
         </Card>
 
@@ -101,6 +111,7 @@ query postDetail($slug:String){
       slug,
       shortText,
       createdAt,
+      updatedAt,  
       url{
         file{
           url

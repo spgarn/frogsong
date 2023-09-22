@@ -2,10 +2,10 @@
     background-color: var(--secondary);
     border-radius: 12px;
     padding: 32px 12px;
-    width: clamp(300px, 95%, 1200px);
     align-self: center;
     position: relative;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .card-wrapper{
@@ -16,6 +16,49 @@
    min-height: 85vh;
    padding:0px 12px;
    gap:80px;
+   position: relative;
+}
+
+.go-back {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1;
+    padding-left: 15px;
+    position: absolute;
+    cursor: pointer;
+    left: 24px;
+    top: 18px;
+}
+.go-back::before,
+.go-back::after {
+    content: "";
+    display: block;
+    left: 0px;
+    position: absolute;
+    top: 50%;
+    transition: left 0.1s;
+}
+.go-back::before {
+    border-color: white;
+    border-style: solid;
+    border-width: 0 0 4px 4px;
+    height: 12px;
+    margin-top: -6px;
+    width: 12px;
+
+    transform: rotate( 45deg );
+    -webkit-transform: rotate( 45deg );
+}
+.go-back::after {
+    background: white;
+    height: 4px;
+    width: 22px;
+}
+.go-back:hover::before,
+.go-back:hover::after {
+    left: -6px;
 }
 
 @media screen and (max-width: 1000px){
