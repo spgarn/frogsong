@@ -19,7 +19,7 @@ export default function Home() {
     /*     const windowSize = React.useRef([window.innerWidth, window.innerHeight]);
         const loadDataLimit = getLimitFromWindowWidth(windowSize.current[0]) */
 
-    if (!isLoading || postsIsLoading || !posts || !heroData) return <Loader />
+    if (isLoading || postsIsLoading || !posts || !heroData) return <Loader />
 
 
     const fields = posts?.items?.map(post => post.fields)
