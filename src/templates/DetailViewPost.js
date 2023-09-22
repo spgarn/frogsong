@@ -7,7 +7,7 @@ import './templates.css'
 import H2 from '../components/Texts/H2';
 import CardSlider from '../components/CardSlider/CardSlider';
 import Card from '../components/Card/Card';
-import { IFrameContainer } from '../components/IframeContainer/IFrameContainer';
+import { IFrameContainer } from '../components/IframeContainer/IFrameContainerr';
 
 
 
