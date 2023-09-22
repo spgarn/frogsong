@@ -29,7 +29,7 @@ const DetailViewGame = ({ data }) => {
       <div className='game-detail-content'>
 
     
-            <Card gobackUrl={`/${location[1]}`} style={{gridArea:'main'}} className={'small-card-class'} title={data.contentfulProjects.title}>
+            <Card gobackUrl={`/${location[3]}`} style={{gridArea:'main'}} className={'small-card-class'} title={data.contentfulProjects.title}>
                 <div className="blog-post-contenxt" style={{ gridArea: 'text' }}>{documentToReactComponents(JSON.parse(data.contentfulProjects.detailedText.raw), options)}</div>
             </Card>
             <div className='game-aside'>
