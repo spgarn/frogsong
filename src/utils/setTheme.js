@@ -21,5 +21,5 @@ async function importFontUrl(fontUrl) {
 }
 
 async function setLogoFont(fontFamily){
-    document.querySelector('.logo-text').style.fontFamily =`'${fontFamily}'`
+    document.querySelector('.logo-text').style.fontFamily =`'${fontFamily}', sans-serif`
 }
