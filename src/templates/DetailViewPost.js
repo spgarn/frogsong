@@ -74,7 +74,6 @@ const DetailViewPost = ({ data }) => {
 export const query = graphql`
 query postDetail($slug:String){
   contentfulNews(slug:{eq:$slug}) {
-    id,
     contentful_id,
     author{
       name,
@@ -107,7 +106,6 @@ query postDetail($slug:String){
   allContentfulNews{
     nodes{
       title,
-      id,
       slug,
       shortText,
       createdAt,
