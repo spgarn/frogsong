@@ -112,6 +112,7 @@ export async function fetchHistory() {
 
 }
 
+
 export async function fetchLifeAt() {
 
     const entry = await client.getEntry("20eFCdjDL1fcy8fU0k8Ayl")
@@ -154,6 +155,29 @@ export async function fetchApplicationFormContentPage() {
 export async function fetchJobContentPage() {
 
     const entry = await client.getEntry("256eThunKLxF32v6tWGRAX")
+
+    if (entry) return entry
+
+}
+
+export async function fetchOriginalIpContentPage() {
+
+    const entry = await client.getEntry("MVEyCqvYmvbaA71HLFxWS")
+
+    if (entry) return entry
+
+}
+
+export async function fetchPortfolioContentPage() {
+
+    const entry = await client.getEntry("256eThunKLxF32v6tWGRAX")
+
+    if (entry) return entry
+
+}
+export async function fetchNewsContentPage() {
+
+    const entry = await client.getEntry("7xZMnSOvN5vt2dGYVF1JTO")
 
     if (entry) return entry
 

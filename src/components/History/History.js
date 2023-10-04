@@ -1,5 +1,4 @@
 import React from 'react'
-import H3 from '../Texts/H3'
 import './history.css'
 import Card from '../Card/Card'
 import Icon from '../Icon/Icon'
@@ -18,7 +17,7 @@ const History = () => {
   if(isloading || !data) return <Loader/>
 
   return (
-    <Card title={data?.fields?.title} description={data?.fields?.shortText} style={{minHeight:'0px'}}>
+    <Card title={data?.fields?.title} description={data?.fields?.shortText || data.fields.subTitle} style={{minHeight:'0px'}}>
       <Icon classname={'fa fa-hourglass-half fa-2x'}></Icon>
     <RichTextStyleElement style={{ textAlign: 'left', padding:'24px' }}>{data.fields.content}</RichTextStyleElement>
  </Card>

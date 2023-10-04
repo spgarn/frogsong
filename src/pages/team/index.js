@@ -5,20 +5,20 @@ import { fetchTeamContentPage, fetchTeamMembers } from '../../utils/contentfulCo
 import Loader from '../../components/Loader/Loader';
 
 const Team = () => {
-    const { data: teamMembers, isLoading: teamIsLoading } = useQuery(['teamMembers'], async () => {
-        return await fetchTeamMembers();
-    });
-
-    const { data: teamContentPage, isLoading: teamIsLoadingContentPage } = useQuery(['teamContentPage'], async () => {
-      return await fetchTeamContentPage();
+  const { data: teamMembers, isLoading: teamIsLoading } = useQuery(['teamMembers'], async () => {
+    return await fetchTeamMembers();
   });
 
-    if (teamIsLoading || !teamMembers || !teamContentPage || teamIsLoadingContentPage) return <Loader />
+  const { data: teamContentPage, isLoading: teamIsLoadingContentPage } = useQuery(['teamContentPage'], async () => {
+    return await fetchTeamContentPage();
+  });
+
+  if (teamIsLoading || !teamMembers || !teamContentPage || teamIsLoadingContentPage) return <Loader />
 
 
 
   return (
-    <CareerList employees={teamMembers} title={teamContentPage.fields.title} description={teamContentPage.fields.shortText}></CareerList>
+    <CareerList employees={teamMembers} title={teamContentPage.fields.title} description={teamContentPage.fields.shortText || teamContentPage.fields.subTitle}></CareerList>
   )
 }
 

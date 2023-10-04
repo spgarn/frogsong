@@ -10,7 +10,7 @@ const NewsCard = ({ post, to, createdAt }) => {
         <Link to={to} key={post.id} className='post-card'>
             
             
-            <img alt="Author" style={{ gridArea: 'image',width:'100%',maxHeight:'100%',objectFit:'cover' }} src={`${post?.url?.fields?.file?.url || post?.url?.file?.url}?w=300&h=300&fit=fill&f=center`}></img>
+            <img alt="Author" className='news-image' style={{ gridArea: 'image' }} src={`${post?.url?.fields?.file?.url || post?.url?.file?.url}?w=300&h=300&fit=fill&f=center`}></img>
             <H2 className={'post-card-title dark-text'} style={{ gridArea: 'title',padding:'0px 12px' }}>{post.title}</H2>
             <H4 className={'dark-text'} style={{ gridArea: 'description',padding:'0px 12px' }}>{post?.shortText?.length > 115 ?
             `${post.shortText.substring(0, 115)}...` : post.shortText}</H4>

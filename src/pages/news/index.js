@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchBlogPosts } from '../../utils/contentfulConnector'
+import { fetchBlogPosts, fetchNewsContentPage } from '../../utils/contentfulConnector'
 import Loader from '../../components/Loader/Loader'
 import './postPage.css'
 import { useQuery } from '@tanstack/react-query';
@@ -15,14 +15,18 @@ const News = () => {
         return await fetchBlogPosts();
     });
 
+    const { data: newsContentPage, newsContentPageisLoading } = useQuery(['newsContentPage'], async () => {
+        return await fetchNewsContentPage();
+    });
 
 
 
 
-    if (isLoading || !posts) return <Loader />
+
+    if (isLoading || !posts || !newsContentPage ||newsContentPageisLoading) return <Loader />
     return (
         <>
-        <Card title={'News'} description={'This is where you will find all the latest news from Frogsong!'} style={{minHeight:'0px'}}>
+        <Card title={newsContentPage.fields.title} description={newsContentPage.fields.shortText || newsContentPage.fields.subTitle}  style={{minHeight:'0px'}}>
             <Icon classname={'fa fa-newspaper-o fa-2x'}></Icon>
             <div className='page-post-list'>{posts.items.map(post => <NewsCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></NewsCard>)}</div>
         </Card>

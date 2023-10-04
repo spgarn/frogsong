@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchPortfolio } from '../../utils/contentfulConnector'
+import { fetchPortfolio, fetchPortfolioContentPage } from '../../utils/contentfulConnector'
 import GameCard from '../../components/Games/GameCard'
 import './gamesPage.css'
 import Loader from '../../components/Loader/Loader'
@@ -13,15 +13,21 @@ const Portfolio = () => {
         return await fetchPortfolio();
     });
 
-    if (isLoading || !games) return <Loader />
+    const { data: portfolio, isLoading: portfolioIsLoading } = useQuery(['portfolioContentPage'], async () => {
+        return await fetchPortfolioContentPage();
+    });
+
+    if (isLoading || !games || !portfolio || portfolioIsLoading) return <Loader />
+
+    console.log(portfolio)
     return (
-<>
-            <Card title={'Portfolio'} description={'This is where you will find all the different projects we have been involved with!'} className='page-game-list' >
-            <Icon className={'fa fa-handshake-o fa-2x icon-container'}></Icon>
-            {games.items.map(project => <GameCard  to={`/portfolio/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}
-            
+        <>
+            <Card title={portfolio.fields.title} description={portfolio.fields.shortText || portfolio.fields.subTitle} className='page-game-list' >
+                <Icon className={'fa fa-handshake-o fa-2x icon-container'}></Icon>
+                {games.items.map(project => <GameCard to={`/portfolio/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}
+
             </Card >
-                    </>
+        </>
     )
 }
 

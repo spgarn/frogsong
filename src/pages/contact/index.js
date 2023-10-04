@@ -15,7 +15,7 @@ if (isLoading || !contact) return <Loader />
 
 
   return (
-    <ContactForm title={contact.fields.title} description={contact.fields.shortText}/>
+    <ContactForm title={contact.fields.title} description={contact.fields.shortText || contact.fields.subTitle}/>
   )
 }
 

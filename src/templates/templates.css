@@ -38,7 +38,7 @@
 
 .post-aside{
     grid-area: aside;
-    margin-top: 233px;
+    margin-top: 238px;
     border-radius: 12px;
     width: 100%;
     display: flex;
@@ -53,7 +53,7 @@
 
 .game-aside{
     grid-area: aside;
-    margin-top: 228px;
+    margin-top: 238px;
     border-radius: 12px;
     width: 100%;
     display: flex;

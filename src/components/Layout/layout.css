@@ -54,11 +54,11 @@ li {
 }
 
 textarea {
-    font-family: Kosugi;
+    font-family: Acme;
 }
 
 input {
-    font-family: Kosugi
+    font-family: Acme
 }
 
 a {
@@ -68,8 +68,6 @@ a {
 }
 
 a:hover {
-
-    color: var(--complimentary);
     transition: 0.5s all;
 }
 

@@ -33,11 +33,11 @@ const Career = () => {
     return (
         <>
     
-        <Card title={jobContentPage.fields.title} description={jobContentPage.fields.shortText} style={{minHeight:'0'}}>
+        <Card title={jobContentPage.fields.title} description={jobContentPage.fields.shortText || jobContentPage.fields.subTitle} style={{minHeight:'0'}}>
                 <Icon classname={'fa fa-search fa-2x'}></Icon>
                 <JobList setSubject={setSubject} jobs={jobs}></JobList>
         </Card>
-        <Card title={applicationFormContentPage.fields.title} description={applicationFormContentPage.fields.shortText}>
+        <Card title={applicationFormContentPage.fields.title} description={applicationFormContentPage.fields.shortText || applicationFormContentPage.fields.subTitle}>
                 <Icon classname={'fa fa-envelope fa-2x'}></Icon>
                 <ContactFormJob subject={subject}></ContactFormJob>
          </Card>

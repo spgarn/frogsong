@@ -9,7 +9,7 @@
     border-bottom: 4px solid lighten(gray, 70%);
     transition: 0.5s all;
     text-transform: uppercase;
-    font-family: Kosugi;
+    font-family: Acme;
     font-size: 15px;
 }
 .primary-button:hover{

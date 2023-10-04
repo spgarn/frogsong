@@ -1,5 +1,5 @@
 import React from 'react'
-import { fetchPortfolio } from '../../utils/contentfulConnector';
+import { fetchOriginalIpContentPage, fetchPortfolio } from '../../utils/contentfulConnector';
 import Card from '../../components/Card/Card';
 import { useQuery } from '@tanstack/react-query';
 import Loader from '../../components/Loader/Loader';
@@ -12,9 +12,13 @@ const Originalips = () => {
       return await fetchPortfolio(200,true);
   });
 
-  if (isLoading || !games) return <Loader />
+  const { data: originalIps, isLoading: originalIpsIsLoading } = useQuery(['originalIps'], async () => {
+    return await fetchOriginalIpContentPage();
+});
+
+  if (isLoading || !games || originalIpsIsLoading || !originalIps) return <Loader />
   return (
-          <Card title={'Original IPs'} description={'This is where you will find all the different projects we have been involved with!'} className='own-ip-game-list'>
+          <Card title={originalIps.fields.title} description={originalIps.fields.shortText || originalIps.fields.subTitle} className='own-ip-game-list'>
                 <Icon className={'fa fa-gamepad fa-2x icon-container'}/>
             {games.items.map(project => <GameCard  to={`/originalips/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}</Card >
   )
