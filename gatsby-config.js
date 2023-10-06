@@ -17,7 +17,7 @@ const { GATSBY_ACCESS_TOKEN, GATSBY_SPACE_ID } = process.env
 
 
 module.exports = {
-    pathPrefix: "/frogsong",
+    // pathPrefix: "/frogsong",
     plugins: [{
         resolve: `gatsby-source-contentful`,
         options: {
