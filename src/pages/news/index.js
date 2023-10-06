@@ -30,10 +30,10 @@ const News = () => {
             <Icon classname={'fa fa-newspaper-o fa-2x'}></Icon>
             <div className='page-post-list'>{posts.items.map(post => <NewsCard key={post.fields.id} post={post.fields} createdAt={post.sys.createdAt} to={post.fields.slug}></NewsCard>)}</div>
         </Card>
-        <Card title={'Socials'} description={'Be sure to keep updated!'} style={{minHeight:'0px'}}>
+        {/* <Card title={'Socials'} description={'Be sure to keep updated!'} style={{minHeight:'0px'}}>
             <Icon classname={"fa fa-video fa-2x career-icon"}></Icon>
             <SocialMedia />
-        </Card>
+        </Card> */}
         </>
     )
 }

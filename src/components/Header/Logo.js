@@ -7,8 +7,7 @@ import './header.css'
 const Logo = () => {
     return (
         <Link className='logo' to="/">
-            <img alt="noreferer" src={Image}></img>
-            <LogoText>Frogsong studios</LogoText>
+            <img className='logo-image' alt="noreferer" src={Image}></img>
         </Link>
     )
 }

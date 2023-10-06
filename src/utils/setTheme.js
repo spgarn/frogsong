@@ -3,7 +3,6 @@ export async function setTheme(colors) {
     Object.entries(promiseResponse.fields).forEach(([name, value]) => {
         if (name === 'fontFamily') return setFontFamilyToBody(value)
         if (name === 'font') return importFontUrl(value)
-        if(name === 'logoFont') return setLogoFont(value)
         document.documentElement.style.setProperty(`--${name}`, `#${value}`);
     })
 }
@@ -20,6 +19,3 @@ async function importFontUrl(fontUrl) {
     document.head.appendChild(link);
 }
 
-async function setLogoFont(fontFamily){
-    document.querySelector('.logo-text').style.fontFamily =`'${fontFamily}'`
-}

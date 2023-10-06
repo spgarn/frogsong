@@ -1,11 +1,10 @@
-
-.header{
-    width:100%;
-    height:60px;
+.header {
+    width: 100%;
+    height: 60px;
     position: fixed;
     background: transparent;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,20 +12,26 @@
     transition: 0.3s all;
 }
 
-.header-background{
-    background: rgba(1,1,1,0.4);;
+.header-background {
+    background: rgba(1, 1, 1, 0.4);
+    ;
 }
 
-.logo{
-    padding:0 0 0 6px;
+.logo {
+    padding: 0 0 0 6px;
     display: flex;
     align-items: center;
+    flex: 1;
+}
+
+.logo-image {
+    max-height: 70px;
 }
 
 .dropdown {
     padding: 0 0;
     margin: 0;
-    max-height: 0; 
+    max-height: 0;
     overflow: hidden;
     transition: all 1s;
     visibility: hidden;
@@ -36,67 +41,73 @@
     font-size: 14px;
     min-width: 100px;
     border-radius: 8px;
-  }
+}
 
-  #non-link{
-    color:white
-  }
+#non-link {
+    color: white;
+}
 
 
-  #non-link:hover .dropdown {
-    max-height:200px;
+#non-link:hover .dropdown {
+    max-height: 200px;
     visibility: visible;
     transition: all 1s;
-  }
+}
 
-.links{
-    padding:0 32px 0 0px;
+.links {
+    padding: 0 32px 0 0px;
     display: flex;
-    gap:24px;
+    gap: 24px;
     align-items: center;
+    justify-content: flex-end;
     -webkit-tap-highlight-color: transparent;
+    flex: 1;
 }
 
-.links li{
-        transition:all 0.3s ease-in-out;
-        padding: 8px 4px;
-        background-color: rgba(1,1,1,0.4);;
+.links li {
+    transition: all 0.3s ease-in-out;
+    padding: 8px 4px;
+    background-color: rgba(1, 1, 1, 0.4);
+    ;
 }
 
 
 
 
-.socials-header{
+.socials-header {
     display: flex;
     flex-direction: row;
-    gap:12px
+    gap: 12px
 }
 
 
 @media screen and (max-width:600px) {
-    .logo{
-        padding:0px
+    .logo {
+        padding: 0px
     }
-    .links{
-        gap:6px;
+
+    .links {
+        gap: 6px;
         font-size: 14px;
     }
 }
 
 @media screen and (max-width:900px) {
-    .logo{
-        padding:0px
+    .logo {
+        padding: 0px
     }
-    .links{
-        gap:6px;
+
+    .links {
+        gap: 6px;
         font-size: 14px;
     }
 
-    .socials-header{
+    .socials-header {
         display: none;
     }
+
     #non-link:focus-within .dropdown {
         height: 135px;
         visibility: visible;
-      }
+    }
 }
