@@ -170,7 +170,7 @@ export async function fetchOriginalIpContentPage() {
 
 export async function fetchPortfolioContentPage() {
 
-    const entry = await client.getEntry("256eThunKLxF32v6tWGRAX")
+    const entry = await client.getEntry("4eRUtJyWWwKyne92xCz96w")
 
     if (entry) return entry
 
