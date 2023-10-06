@@ -19,7 +19,6 @@ const Portfolio = () => {
 
     if (isLoading || !games || !portfolio || portfolioIsLoading) return <Loader />
 
-    console.log(portfolio)
     return (
         <>
             <Card title={portfolio.fields.title} description={portfolio.fields.shortText || portfolio.fields.subTitle} className='page-game-list' >
