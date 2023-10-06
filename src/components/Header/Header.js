@@ -26,7 +26,7 @@ const Header = () => {
             <div className='logo'>
                 <Logo></Logo>
             </div>
-            <div >
+            <div style={{ width: "33.3%" }}>
                 <ul className='socials-header'>
                     <Socials></Socials>
                 </ul>

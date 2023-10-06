@@ -19,11 +19,12 @@ const Portfolio = () => {
 
     if (isLoading || !games || !portfolio || portfolioIsLoading) return <Loader />
 
+
     return (
         <>
             <Card title={portfolio.fields.title} description={portfolio.fields.shortText || portfolio.fields.subTitle} className='page-game-list' >
                 <Icon className={'fa fa-handshake-o fa-2x icon-container'}></Icon>
-                {games.items.map(project => <GameCard to={`/portfolio/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}
+                {games.items.map(project => <GameCard to={`/portfolio/${project.fields.slug}`} key={project.sys.id} game={project.fields}></GameCard>)}
 
             </Card >
         </>

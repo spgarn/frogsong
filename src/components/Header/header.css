@@ -21,7 +21,7 @@
     padding: 0 0 0 6px;
     display: flex;
     align-items: center;
-    flex: 1;
+    width: 33.3%;
 }
 
 .logo-image {
@@ -61,14 +61,18 @@
     align-items: center;
     justify-content: flex-end;
     -webkit-tap-highlight-color: transparent;
-    flex: 1;
+    width: 33.3%;
+
 }
 
 .links li {
     transition: all 0.3s ease-in-out;
     padding: 8px 4px;
     background-color: rgba(1, 1, 1, 0.4);
-    ;
+}
+
+.dropdown > li {
+    padding: 8px 4px 8px 12px;
 }
 
 
@@ -77,7 +81,9 @@
 .socials-header {
     display: flex;
     flex-direction: row;
-    gap: 12px
+    gap: 12px;
+    padding-left: 30px;
+    justify-content: center;
 }
 
 

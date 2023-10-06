@@ -17,10 +17,11 @@ const Originalips = () => {
 });
 
   if (isLoading || !games || originalIpsIsLoading || !originalIps) return <Loader />
+
   return (
           <Card title={originalIps.fields.title} description={originalIps.fields.shortText || originalIps.fields.subTitle} className='own-ip-game-list'>
                 <Icon className={'fa fa-gamepad fa-2x icon-container'}/>
-            {games.items.map(project => <GameCard  to={`/originalips/${project.fields.slug}`} key={project.fields.id} game={project.fields}></GameCard>)}</Card >
+            {games.items.map(project => <GameCard  to={`/originalips/${project.fields.slug}`} key={project.sys.id} game={project.fields}></GameCard>)}</Card >
   )
 }
 
