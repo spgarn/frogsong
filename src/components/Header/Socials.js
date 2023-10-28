@@ -3,7 +3,7 @@ import './header.css'
 
 const links = [
     { url: 'https://twitter.com/FrogsongStudios', class: 'fab fa-twitter fa-lg', id: 1 },
-    { url: 'https://store.steampowered.com/search/?developer=Frogsong%20Studios', class: 'fab fa-steam fa-lg' , id: 2 },
+    { url: 'https://store.steampowered.com/developer/frogsongstudios', class: 'fab fa-steam fa-lg' , id: 2 },
     /*     { url: 'https://www.facebook.com/FrogsongStudios/', class: 'fab fa-facebook', id: 3 }, */
     /*     { url: 'https://www.linkedin.com/company/frogsong-studios/about/', class: 'fab fa-linkedin-in', id: 4 }, */
     { url: 'https://discord.gg/eGkg2hR', class: 'fab fa-discord fa-lg', id: 5 },
