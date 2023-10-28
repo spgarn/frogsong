@@ -37,7 +37,7 @@
     visibility: hidden;
     position: absolute;
     list-style-type: none;
-    left: 0;
+    left: -24px;
     font-size: 14px;
     min-width: 100px;
     border-radius: 8px;
@@ -71,7 +71,7 @@
     background-color: rgba(1, 1, 1, 0.4);
 }
 
-.dropdown > li {
+.dropdown>li {
     padding: 8px 4px 8px 12px;
 }
 
@@ -95,7 +95,9 @@
     .links {
         gap: 6px;
         font-size: 14px;
+        padding-right: 12px;
     }
+
 }
 
 @media screen and (max-width:900px) {
