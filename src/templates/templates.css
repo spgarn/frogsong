@@ -1,98 +1,98 @@
-.post-grid-container{
+.post-grid-container {
     display: grid;
-    grid-template-areas: 
-    '.'
-    'header'
-    'text'
+    grid-template-areas:
+        '.'
+        'header'
+        'text'
     ;
     grid-template-columns: 1fr;
     grid-template-rows: 10vh min-content 70vh;
-    padding:32px;
-    gap:12px;
+    padding: 32px;
+    gap: 12px;
 }
 
 
 
-.blog-post-contenxt{
-    padding:32px;
+.blog-post-contenxt {
+    padding: 32px;
     padding-top: 0px;
     border-radius: 32px;
     overflow: auto;
     background-color: var(--secondary);
 }
 
-.blog-post-contenxt hr{
+.blog-post-contenxt hr {
     width: 99%;
 }
 
 
 
-.post-detail-content{
+.post-detail-content {
     display: grid;
-    grid-template-areas: 
-    'main aside'
+    grid-template-areas:
+        'main aside'
     ;
     grid-auto-columns: 60vw 200px;
     justify-content: center;
 }
 
-.post-aside{
+.post-aside {
     grid-area: aside;
     margin-top: 238px;
     border-radius: 12px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap:24px;
-    padding:24px;
+    gap: 24px;
+    padding: 24px;
     align-items: center;
     height: min-content;
     background-color: var(--secondary);
 }
 
 
-.game-aside{
+.game-aside {
     grid-area: aside;
     margin-top: 238px;
     border-radius: 12px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap:24px;
+    gap: 24px;
 }
 
-.game-detail-content{
+.game-detail-content {
     display: grid;
-    grid-template-areas: 
-    'main aside'
+    grid-template-areas:
+        'main aside'
     ;
     grid-auto-columns: 60vw 450px;
     justify-content: center;
-    gap:36px
+    gap: 36px
 }
 
 
 
 @media screen and (max-width:1000px) {
-.game-aside{
-    display: none;
-}
+    .game-aside {
+        display: none;
+    }
 
-.post-aside{
-    display: none;
-}
+    .post-aside {
+        display: none;
+    }
 
-.game-detail-content{
-    grid-template-areas: 'main';
-    grid-auto-columns: auto;
-    padding:0px 12px
-}
+    .game-detail-content {
+        grid-template-areas: 'main';
+        grid-auto-columns: auto;
+        padding: 0px 12px
+    }
 
-.post-detail-content{
-    grid-template-areas: 'main';
-    grid-auto-columns: auto;
-    padding:0px 12px
-}
+    .post-detail-content {
+        grid-template-areas: 'main';
+        grid-auto-columns: auto;
+        padding: 0px 12px
+    }
 
 
 }
@@ -100,15 +100,13 @@
 
 
 @media screen and (max-width:600px) {
-    .blog-post-contenxt{
-        padding:12px;
-    }
-    .post-grid-container{
-        padding:32px 12px;
+    .blog-post-contenxt {
+        padding: 12px;
     }
 
-   
+    .post-grid-container {
+        padding: 32px 12px;
+    }
+
+
 }
-
-
-

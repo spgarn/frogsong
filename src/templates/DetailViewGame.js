@@ -1,6 +1,6 @@
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS,INLINES } from "@contentful/rich-text-types";
+import { BLOCKS, INLINES } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
 import './templates.css'
 import Card from '../components/Card/Card';
@@ -11,11 +11,12 @@ const DetailViewGame = ({ data }) => {
     renderNode: {
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const asset = data.contentfulProjects.detailedText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
-        return (<img style={{ width: '25%', height: 'auto', borderRadius: '12px' }} src={asset.url} alt={asset.fileName}
-        />)
+        return (
+          <img style={{ width: '45%', height:"150px", borderRadius: '12px',margin:"8px" }} src={asset.url} alt={asset.fileName} />
+        )
       },
       [INLINES.HYPERLINK]: (node) => {
-        return (<a style={{textDecoration:"underline"}} aria-label='rich-text-link' target='_blank' rel="noreferrer" href={node.data.uri}>{node.data.uri}</a>)
+        return (<a style={{ textDecoration: "underline" }} aria-label='rich-text-link' target='_blank' rel="noreferrer" href={node.data.uri}>{node.data.uri}</a>)
       }
     }
   }
