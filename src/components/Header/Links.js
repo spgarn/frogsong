@@ -12,16 +12,18 @@ const Links = () => {
             {links.map((link, i) => {
                 return (
                     link?.children?.length > 0 ?
-                        <div id='non-link' style={{ position: 'relative', cursor: 'pointer' }} key={i}>
-                            {link.main}<ul className='dropdown'>{link.children.map(child => <li key={child}><Link to={`/${child.toLowerCase().replaceAll(' ', '')}`}>{child}</Link></li>)}</ul>
-                        </div>
+                        link.main === "GAMES" ?
+                            <Link id='non-link' to={`/${link.main.toLowerCase()}`} style={{ position: 'relative', cursor: 'pointer' }} key={i}>
+                                {link.main}<ul className='dropdown'>{link.children.map(child => <li key={child}><Link to={`/${child.toLowerCase().replaceAll(' ', '')}`}>{child}</Link></li>)}</ul>
+                            </Link>
+                            :
+                            <div id='non-link' style={{ position: 'relative', cursor: 'pointer' }} key={i}>
+                                {link.main}<ul className='dropdown'>{link.children.map(child => <li key={child}><Link to={`/${child.toLowerCase().replaceAll(' ', '')}`}>{child}</Link></li>)}</ul>
+                            </div>
                         :
                         <Link style={{ position: 'relative' }} to={`/${link.main.toLowerCase()}`} key={i}>
                             {link.main}
                         </Link>
-
-
-
 
                 )
             })

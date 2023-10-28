@@ -1,0 +1,26 @@
+.games-list {
+    display: grid;
+    gap: 12px;
+    padding: 50px 12px 24px 12px !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 380px));
+    position: relative;
+    background-color: var(--secondary);
+    border-radius: 12px;
+    justify-content: center;
+}
+
+.games-wrapper {
+    display: flex;
+    min-height: 85vh;
+    padding: 0px 12px;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .games-list {
+        grid-template-columns: 1fr;
+    }
+}
