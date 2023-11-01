@@ -23,6 +23,7 @@ export async function fetchPortfolio(limit,isOwnIp) {
 
     const entries = await client.getEntries({
         content_type: 'projects',
+        order: '-fields.finishedAt',
         limit: limit || 200,
         'fields.isOwnIp':isOwnIp || false
     })
