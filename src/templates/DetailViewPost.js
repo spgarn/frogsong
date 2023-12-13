@@ -24,7 +24,7 @@ const DetailViewPost = ({ data }) => {
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const asset = data.contentfulNews.contentText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
         return (
-          <img style={{ width: '45%', height: "150px", borderRadius: '12px', margin: "8px" }} src={asset.url} alt={asset.fileName} />)
+          <img style={{ width: '50%', borderRadius: '12px', margin: "8px" }} src={asset.url} alt={asset.fileName} />)
       },
       [INLINES.HYPERLINK]: (node) => {
         if ((node.data.uri).includes("youtube.com/embed")) {

@@ -12,7 +12,7 @@ const DetailViewGame = ({ data }) => {
       [BLOCKS.EMBEDDED_ASSET]: (node) => {
         const asset = data.contentfulProjects.detailedText.references.find(ref => ref.contentful_id === node.data.target.sys.id)
         return (
-          <img style={{ width: '45%', height:"150px", borderRadius: '12px',margin:"8px" }} src={asset.url} alt={asset.fileName} />
+          <img style={{ width: "clamp(200px, 45%, 500px)", borderRadius: '12px',margin:"8px" }} src={asset.url} alt={asset.fileName} />
         )
       },
       [INLINES.HYPERLINK]: (node) => {
