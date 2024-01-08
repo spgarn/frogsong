@@ -5,6 +5,7 @@ import { INLINES } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
 import './templates.css'
 import H2 from '../components/Texts/H2';
+import H4 from '../components/Texts/H4';
 import CardSlider from '../components/CardSlider/CardSlider';
 import Card from '../components/Card/Card';
 import { IFrameContainer } from '../components/IframeContainer/IFrameContainer';
@@ -32,6 +33,10 @@ const DetailViewPost = ({ data }) => {
         } else if ((node.data.uri).includes("store.steampowered")) {
           const widgetUrl = node.data.uri.replace('app', 'widget')
           return <iframe title={widgetUrl} src={widgetUrl} frameBorder="0" width="100%" height="190"></iframe>
+        }
+        else {
+          const widgetUrl = node.data.uri.replace('app', 'widget')
+          return <a style={{textDecoration:"underline"}} href={widgetUrl} rel="noreferrer" target='_blank'>{widgetUrl}</a>
         }
       }
       // HERE IS CODE TO RENDER LINKS TO OTHER POSTS!
