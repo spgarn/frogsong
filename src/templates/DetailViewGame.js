@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import './templates.css'
 import Card from '../components/Card/Card';
 import H4 from '../components/Texts/H4';
+import { IFrameContainer } from '../components/IframeContainer/IFrameContainer';
 
 const DetailViewGame = ({ data }) => {
   const options = {
