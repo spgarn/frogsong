@@ -15,10 +15,20 @@ const DetailViewGame = ({ data }) => {
           <img style={{ width: "clamp(200px, 45%, 500px)", borderRadius: '12px',margin:"8px" }} src={asset.url} alt={asset.fileName} />
         )
       },
-      [INLINES.HYPERLINK]: (node) => {
-        return (<a style={{ textDecoration: "underline" }} aria-label='rich-text-link' target='_blank' rel="noreferrer" href={node.data.uri}>{node.data.uri}</a>)
+   
+        [INLINES.HYPERLINK]: (node) => {
+          if ((node.data.uri).includes("youtube.com/embed")) {
+            return <IFrameContainer><iframe title="Unique Title 002" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IFrameContainer>
+          } else if ((node.data.uri).includes("store.steampowered")) {
+            const widgetUrl = node.data.uri.replace('app', 'widget')
+            return <iframe title={widgetUrl} src={widgetUrl} frameBorder="0" width="100%" height="190"></iframe>
+          }
+          else {
+            return <a style={{ textDecoration: "underline" }} aria-label='rich-text-link' target='_blank' rel="noreferrer" href={node.data.uri}>{node.data.uri}</a>
+          }
+        }
       }
-    }
+    
   }
 
   const location = window.location.pathname.split('/')
