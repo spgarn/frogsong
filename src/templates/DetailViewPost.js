@@ -5,7 +5,6 @@ import { INLINES } from "@contentful/rich-text-types";
 import { graphql } from "gatsby"
 import './templates.css'
 import H2 from '../components/Texts/H2';
-import H4 from '../components/Texts/H4';
 import CardSlider from '../components/CardSlider/CardSlider';
 import Card from '../components/Card/Card';
 import { IFrameContainer } from '../components/IframeContainer/IFrameContainer';
@@ -28,7 +27,11 @@ const DetailViewPost = ({ data }) => {
           <img style={{ width: '50%', borderRadius: '12px', margin: "8px" }} src={asset.url} alt={asset.fileName} />)
       },
       [INLINES.HYPERLINK]: (node) => {
-        if ((node.data.uri).includes("youtube.com/embed")) {
+        if ((node.data.uri).includes("youtube.com/watch")) {
+          const newUrl = node.data.uri.replace("watch?v=", "embed/")
+          return <IFrameContainer><iframe title="Unique Title 002" src={newUrl} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IFrameContainer>
+        }
+        else if ((node.data.uri).includes("youtube.com/embed")) {
           return <IFrameContainer><iframe title="Unique Title 002" src={node.data.uri} allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" frameBorder="0" allowFullScreen></iframe></IFrameContainer>
         } else if ((node.data.uri).includes("store.steampowered")) {
           const widgetUrl = node.data.uri.replace('app', 'widget')
@@ -36,7 +39,7 @@ const DetailViewPost = ({ data }) => {
         }
         else {
           const widgetUrl = node.data.uri.replace('app', 'widget')
-          return <a style={{textDecoration:"underline"}} href={widgetUrl} rel="noreferrer" target='_blank'>{widgetUrl}</a>
+          return <a style={{ textDecoration: "underline" }} href={widgetUrl} rel="noreferrer" target='_blank'>{widgetUrl}</a>
         }
       }
       // HERE IS CODE TO RENDER LINKS TO OTHER POSTS!
