@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgatsby_starter_hello_world=self.webpackChunkgatsby_starter_hello_world||[]).push([[216],{3432:function(e,t,a){a.r(t);var l=a(7294),s=a(1561),r=a(9975),n=a(9068);t.default=()=>{const[e,t]=l.useState(),a=(0,r.OF)();if(l.useEffect((()=>{a.then((e=>t(e)))}),[]),e)return l.createElement(s.Z,null,l.createElement("div",{className:"page-game-list",style:{marginTop:"50px"}},e.items.map((e=>l.createElement(n.Z,{game:e.fields})))))}}}]);
-//# sourceMappingURL=component---src-pages-projects-index-js-fa3efb306f31bf6887c6.js.map

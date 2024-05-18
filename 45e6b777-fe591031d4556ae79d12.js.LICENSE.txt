@@ -1,0 +1,16 @@
+/*!
+   * Pusher JavaScript Library v1.12.2
+   * http://pusherapp.com/
+   *
+   * Copyright 2011, Pusher
+   * Released under the MIT licence.
+   */
+
+/**
+ * @license uploadcare-widget v3.21.0
+ *
+ * Copyright (c) 2022 Uploadcare, Inc.
+ *
+ * This source code is licensed under the BSD 2-Clause License
+ * found in the LICENSE file in the root directory of this source tree.
+ */
