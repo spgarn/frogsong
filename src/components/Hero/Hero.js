@@ -16,7 +16,7 @@ const Hero = ({ heroData, ...rest }) => {
                     {heroData.fields.heading && <H1 className={'no-text-shadow'} style={{ padding: '0px 12px' }}>{heroData.fields.heading}</H1>}
                     {heroData.fields.subhead && <H2 className={'no-text-shadow'} style={{ padding: '0px 12px', textTransform: 'uppercase' }}>{heroData.fields.subhead}</H2>}
                     <a target='_blank' href={heroData.fields.buttonLink} rel="noreferrer" style={{ padding: '0px 12px' }}>
-                        <Button style={{ width: '200px', borderRadius: '2px' }}>Try it out now!</Button>
+                        <Button style={{ width: '200px', borderRadius: '2px' }}>GO TO KICKSTARTER!</Button>
                     </a>
 
                 </div>
